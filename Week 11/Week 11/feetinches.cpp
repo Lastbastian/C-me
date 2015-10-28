@@ -9,7 +9,7 @@ private:
     int inches;
 public:
     feetInches(int inFeet = 0, int inInches = 0);       // Constructor
-    feetInches addedTo(const feetInches &other) const;  // Member function
+    feetInches operator+(const feetInches &other) const;
     void print() const;
 };
 
@@ -19,19 +19,12 @@ feetInches::feetInches(int inFeet, int inInches)
     inches = inInches;
 }
 
-feetInches feetInches::addedTo(const feetInches &other) const
-{
-    feetInches temp;                                    // temp object
-    temp.feet = feet + other.feet;
-    temp.inches = inches + other.inches;
-    return temp;                                        // returning the temp object
-
-}
 // OVERLOADING THE + OPERATOR FOR THE feetInches class
-feetInches operator+(const feetInches &left, const feetInches &right)
+feetInches feetInches::operator+(const feetInches &other) const
 {
     feetInches temp;
-    temp = left.addedTo(right); //crafty - using the addedTo function
+    temp.feet = feet + other.feet;
+    temp.inches = inches + other.inches;
     return temp;
 }
 
