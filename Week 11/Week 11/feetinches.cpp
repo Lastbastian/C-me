@@ -10,7 +10,8 @@ private:
 public:
     feetInches(int inFeet = 0, int inInches = 0);       // Constructor
     feetInches operator+(const feetInches &other) const;
-    feetInches operator++();
+    feetInches operator++();                            // Pre-increment overload function
+    feetInches operator++(int);                         // Post-increment overload function
     void print() const;
 };
 
@@ -35,6 +36,13 @@ feetInches feetInches::operator++()
     return *this;
 }
 
+feetInches feetInches::operator++(int)
+{
+    feetInches temp(feet, inches);
+    feet++;
+    return temp;
+}
+
 void feetInches::print() const
 {
     cout << feet << " feet, " << inches << " inches" << endl;
@@ -53,6 +61,8 @@ int main()
     f1.print();
     cout << endl;
     
+    (f1++).print();
+    cout << endl;
     (++f1).print();
     cout << endl;
     f1.print();
