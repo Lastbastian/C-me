@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		855602E81BE162D3007DEB0E /* budget.h in Sources */ = {isa = PBXBuildFile; fileRef = 855602E71BE162D3007DEB0E /* budget.h */; };
-		855602EA1BE16413007DEB0E /* budget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855602E91BE16413007DEB0E /* budget.cpp */; };
-		855602EC1BE164D1007DEB0E /* budget2_staticFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855602EB1BE164D1007DEB0E /* budget2_staticFunctions.cpp */; };
-		855602EF1BE16ED7007DEB0E /* Auxil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855602EE1BE16ED7007DEB0E /* Auxil.cpp */; };
+		855602F21BE1800A007DEB0E /* feetinches.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855602F01BE1800A007DEB0E /* feetinches.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +32,8 @@
 		855602EB1BE164D1007DEB0E /* budget2_staticFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = budget2_staticFunctions.cpp; sourceTree = "<group>"; wrapsLines = 0; };
 		855602ED1BE16DCE007DEB0E /* Auxil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Auxil.h; sourceTree = "<group>"; };
 		855602EE1BE16ED7007DEB0E /* Auxil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Auxil.cpp; sourceTree = "<group>"; };
+		855602F01BE1800A007DEB0E /* feetinches.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = feetinches.cpp; sourceTree = "<group>"; };
+		855602F11BE1800A007DEB0E /* feetinches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feetinches.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,8 @@
 		855602DD1BE08615007DEB0E /* Week 11 */ = {
 			isa = PBXGroup;
 			children = (
+				855602F01BE1800A007DEB0E /* feetinches.cpp */,
+				855602F11BE1800A007DEB0E /* feetinches.h */,
 				855602DE1BE08615007DEB0E /* class_staticVariables.cpp */,
 				855602E51BE15BC6007DEB0E /* budget_staticVariables.cpp */,
 				855602E71BE162D3007DEB0E /* budget.h */,
@@ -133,10 +135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				855602EA1BE16413007DEB0E /* budget.cpp in Sources */,
-				855602EF1BE16ED7007DEB0E /* Auxil.cpp in Sources */,
-				855602EC1BE164D1007DEB0E /* budget2_staticFunctions.cpp in Sources */,
 				855602E81BE162D3007DEB0E /* budget.h in Sources */,
+				855602F21BE1800A007DEB0E /* feetinches.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
