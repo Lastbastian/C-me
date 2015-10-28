@@ -27,6 +27,13 @@ feetInches feetInches::addedTo(const feetInches &other) const
     return temp;                                        // returning the temp object
 
 }
+// OVERLOADING THE + OPERATOR FOR THE feetInches class
+feetInches operator+(const feetInches &left, const feetInches &right)
+{
+    feetInches temp;
+    temp = left.addedTo(right); //crafty - using the addedTo function
+    return temp;
+}
 
 void feetInches::print() const
 {
@@ -37,7 +44,7 @@ int main()
 {
     feetInches f1, f2(3), f3(4,7);
     
-    f1 = f2.addedTo(f3);
+    f1 = f2 + (f3);
     
     f2.print();
     cout << " plus ";
