@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		855602E81BE162D3007DEB0E /* budget.h in Sources */ = {isa = PBXBuildFile; fileRef = 855602E71BE162D3007DEB0E /* budget.h */; };
 		855602F21BE1800A007DEB0E /* feetinches.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855602F01BE1800A007DEB0E /* feetinches.cpp */; };
+		855602F41BE2BFA0007DEB0E /* feetinchestest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855602F31BE2BFA0007DEB0E /* feetinchestest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		855602EE1BE16ED7007DEB0E /* Auxil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Auxil.cpp; sourceTree = "<group>"; };
 		855602F01BE1800A007DEB0E /* feetinches.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = feetinches.cpp; sourceTree = "<group>"; };
 		855602F11BE1800A007DEB0E /* feetinches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feetinches.h; sourceTree = "<group>"; };
+		855602F31BE2BFA0007DEB0E /* feetinchestest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = feetinchestest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				855602F01BE1800A007DEB0E /* feetinches.cpp */,
+				855602F31BE2BFA0007DEB0E /* feetinchestest.cpp */,
 				855602F11BE1800A007DEB0E /* feetinches.h */,
 				855602DE1BE08615007DEB0E /* class_staticVariables.cpp */,
 				855602E51BE15BC6007DEB0E /* budget_staticVariables.cpp */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				855602E81BE162D3007DEB0E /* budget.h in Sources */,
+				855602F41BE2BFA0007DEB0E /* feetinchestest.cpp in Sources */,
 				855602F21BE1800A007DEB0E /* feetinches.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

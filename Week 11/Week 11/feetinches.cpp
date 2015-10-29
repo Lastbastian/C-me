@@ -1,64 +1,31 @@
+// file: feetinches.cpp
+
 #include <iostream>
+#include "feetinches.h"
 
 using namespace std;
-
-class feetInches
-{
-private:
-    int feet;
-    int inches;
-    void simplify();
-public:
-    feetInches(int inFeet = 0, int inInches = 0);       // Constructor
-    feetInches operator+(const feetInches &other) const;
-    feetInches operator++();                            // Pre-increment overload function
-    feetInches operator++(int);                         // Post-increment overload function
-    void print() const;
-    
-    // friend function
-    friend ostream& operator<<(ostream& out, const feetInches &printMe);
-};
 
 feetInches::feetInches(int inFeet, int inInches)
 {
     feet = inFeet;
     inches = inInches;
+    simplify();
 }
 
-// Overloadint the THE + OPERATOR FOR THE feetInches class
-feetInches feetInches::operator+(const feetInches &other) const
+// Overloading the + operator
+feetInches operator+(const feetInches& left,
+                     const feetInches& right)
 {
-    feetInches temp;
-    temp.feet = feet + other.feet;
-    temp.inches = inches + other.inches;
-    return temp;
+    return feetInches(left.feet + right.feet + left.feet + right.feet);
 }
 
-// Overloading the pre-increment ++operator
-feetInches feetInches::operator++()
+// Overloading the cout or << operator
+ostream& operator<<(ostream& out, const feetInches& right)
 {
-    feet++;
-    return *this;
+    out << right.feet << " feet, " << right.inches << " inches";
+    return out;
 }
 
-// Overloading the post-increment operator++
-feetInches feetInches::operator++(int)
-{
-    feetInches temp(feet, inches);
-    feet++;
-    return temp;
-}
-
-void feetInches::print() const
-{
-    cout << feet << " feet, " << inches << " inches" << endl;
-}
-
-ostream& operator<<(ostream& out, const feetInches &printMe)
-{
-    out << printMe.feet << " feet, " << printMe.inches << " inches ";
-
-}
 
 void feetInches::simplify()
 {
@@ -71,22 +38,39 @@ void feetInches::simplify()
     }
 }
 
-int main()
+// Overloading the < operator
+bool operator<(const feetInches& left,
+               const feetInches& right)
 {
-    feetInches f1, f2(3), f3(4,7);
-    
-    f1 = f2 + f3;
-    
-    f2.print();
-    cout << " plus ";
-    f3.print();
-    cout << " equals ";
-    f1.print();
-    cout << endl;
-    
-    (f1++).print();
-    cout << endl;
-    (++f1).print();
-    cout << endl;
-    f1.print();
+    if (left.feet < right.feet)
+    { return true; }
+    if (left.feet > right.feet)
+    { return false; }
+    return left.inches < right.inches;
 }
+
+// Overloading the pre-increment ++operator
+feetInches feetInches::operator++()
+{
+    feet++;
+    return *this;
+}
+
+// Overloading the post-increment operator++
+feetInches feetInches::operator++(int)
+{
+    feetInches temp(feet, inches);      // declaration statement
+    feet++;
+    return temp;
+}
+
+void feetInches::print() const
+{
+    cout << feet << " feet, " << inches << " inches" << endl;
+}
+
+feetInches feetInches::operator+=(const feetInches& right)
+{
+    *this = *this + right;
+    return *this;
+};
