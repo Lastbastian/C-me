@@ -72,8 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				855602F51BE2D379007DEB0E /* a11.cpp */,
-				855602F81BE2D3DA007DEB0E /* a11test.cpp */,
 				855602F61BE2D379007DEB0E /* a11.h */,
+				855602F81BE2D3DA007DEB0E /* a11test.cpp */,
 				855602F01BE1800A007DEB0E /* feetinches.cpp */,
 				855602F31BE2BFA0007DEB0E /* feetinchestest.cpp */,
 				855602F11BE1800A007DEB0E /* feetinches.h */,

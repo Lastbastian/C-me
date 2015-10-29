@@ -33,3 +33,66 @@
  
  */
 #include "a11.h"
+
+fraction operator+(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
+}
+
+
+
+
+
+
+
+
+
+fraction operator-(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
+}
+
+
+
+
+
+
+
+
+
+fraction operator*(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.numerator, left.denominator * right.denominator);
+
+}
+
+
+
+
+
+
+
+
+
+fraction operator/(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
+}
+
+
+
+
+
+bool operator<(const feetInches& left,
+               const feetInches& right)
+{
+    if (left.feet < right.feet)
+    { return true; }
+    if (left.feet > right.feet)
+    { return false; }
+    return left.inches < right.inches;
+}
