@@ -7,12 +7,16 @@ class feetInches
 private:
     int feet;
     int inches;
+    void simplify();
 public:
     feetInches(int inFeet = 0, int inInches = 0);       // Constructor
     feetInches operator+(const feetInches &other) const;
     feetInches operator++();                            // Pre-increment overload function
     feetInches operator++(int);                         // Post-increment overload function
     void print() const;
+    
+    // friend function
+    friend ostream& operator<<(ostream& out, const feetInches &printMe);
 };
 
 feetInches::feetInches(int inFeet, int inInches)
@@ -21,7 +25,7 @@ feetInches::feetInches(int inFeet, int inInches)
     inches = inInches;
 }
 
-// OVERLOADING THE + OPERATOR FOR THE feetInches class
+// Overloadint the THE + OPERATOR FOR THE feetInches class
 feetInches feetInches::operator+(const feetInches &other) const
 {
     feetInches temp;
@@ -30,12 +34,14 @@ feetInches feetInches::operator+(const feetInches &other) const
     return temp;
 }
 
+// Overloading the pre-increment ++operator
 feetInches feetInches::operator++()
 {
     feet++;
     return *this;
 }
 
+// Overloading the post-increment operator++
 feetInches feetInches::operator++(int)
 {
     feetInches temp(feet, inches);
@@ -46,6 +52,23 @@ feetInches feetInches::operator++(int)
 void feetInches::print() const
 {
     cout << feet << " feet, " << inches << " inches" << endl;
+}
+
+ostream& operator<<(ostream& out, const feetInches &printMe)
+{
+    out << printMe.feet << " feet, " << printMe.inches << " inches ";
+
+}
+
+void feetInches::simplify()
+{
+    if (inches >= 12){
+        feet += inches/12;
+        inches %= 12;
+    } else if (inches < 0){
+        feet -= abs(inches)/12 + 1;
+        inches = 12 - (abs(inches) % 12);
+    }
 }
 
 int main()
