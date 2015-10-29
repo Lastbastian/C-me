@@ -16,7 +16,13 @@ feetInches::feetInches(int inFeet, int inInches)
 feetInches operator+(const feetInches& left,
                      const feetInches& right)
 {
-    return feetInches(left.feet + right.feet + left.feet + right.feet);
+    feetInches temp;
+    
+    temp.feet = left.feet + right.feet;
+    temp.inches = left.inches + right.inches;
+    
+    temp.simplify();
+    return temp;
 }
 
 // Overloading the cout or << operator
