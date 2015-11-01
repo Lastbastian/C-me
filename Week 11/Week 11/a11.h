@@ -12,16 +12,26 @@ class fraction
         fraction(int n = 0, int d = 1);             // Initilization constructor
         fraction operator++();
         fraction operator++(int);
-        fraction operator+=(const fraction& right);
+        fraction operator--();
+        fraction operator --(int);
     
         friend fraction operator+(const fraction& left,
-                              const fraction& right);
+                                  const fraction& right);
+        friend fraction operator+=(const fraction& left,
+                                const fraction& right);
         friend fraction operator-(const fraction& left,
                                   const fraction& right);
+        friend fraction operator-=(const fraction& left,
+                                   const fraction& right);
         friend fraction operator*(const fraction& left,
                                   const fraction& right);
+        friend fraction operator*=(const fraction& left,
+                                   const fraction& right);
         friend fraction operator/(const fraction& left,
                                   const fraction& right);
+        friend fraction operator/=(const fraction& left,
+                                   const fraction& right);
+    
         friend bool operator<(const fraction &left,
                               const fraction &right);
         friend bool operator<=(const fraction &left,

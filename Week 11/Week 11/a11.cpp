@@ -62,13 +62,44 @@ fraction fraction::operator++(int)
     return temp;
 }
 
+// Overloading the pre-increment --operator
+fraction fraction::operator--()
+{
+    //    numerator * denominator + denominator * numerator, denominator * denominator;
+    denominator++;
+    //    feet++;
+    return *this;
+}
+
+// Overloading the post-increment operator--
+fraction fraction::operator--(int)
+{
+    fraction temp(numerator, denominator);
+    denominator++;
+    //    feetInches temp(feet, inches);
+    //    feet++;
+    return temp;
+}
+
 fraction operator+(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
 }
 
+fraction operator+=(const fraction& left,
+                    const fraction& right)
+{
+    return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
+}
+
 fraction operator-(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
+}
+
+fraction operator-=(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
@@ -81,7 +112,20 @@ fraction operator*(const fraction& left,
 
 }
 
+fraction operator*=(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.numerator, left.denominator * right.denominator);
+    
+}
+
 fraction operator/(const fraction& left,
+                   const fraction& right)
+{
+    return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
+}
+
+fraction operator/=(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
