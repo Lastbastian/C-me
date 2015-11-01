@@ -10,6 +10,10 @@ class fraction
     
     public:
         fraction(int n = 0, int d = 1);             // Initilization constructor
+        fraction operator++();
+        fraction operator++(int);
+        fraction operator+=(const fraction& right);
+    
         friend fraction operator+(const fraction& left,
                               const fraction& right);
         friend fraction operator-(const fraction& left,
@@ -32,12 +36,7 @@ class fraction
                                const fraction &right);
         friend std::ostream& operator<<(std::ostream& out,
                                         const fraction& right);
-//    
-//    
-//    
-//    friend operator++();
-//    feetInches operator++(int);
-//    feetInches operator+=(const feetInches& right);
+
 };
 
 #endif

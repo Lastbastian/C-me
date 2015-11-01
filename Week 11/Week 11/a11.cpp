@@ -43,6 +43,25 @@ fraction::fraction(int n, int d)
     denominator = d;
 }
 
+// Overloading the pre-increment ++operator
+fraction fraction::operator++()
+{
+//    numerator * denominator + denominator * numerator, denominator * denominator;
+    denominator++;
+//    feet++;
+    return *this;
+}
+
+// Overloading the post-increment operator++
+fraction fraction::operator++(int)
+{
+    fraction temp(numerator, denominator);
+    denominator++;
+//    feetInches temp(feet, inches);
+//    feet++;
+    return temp;
+}
+
 fraction operator+(const fraction& left,
                    const fraction& right)
 {
@@ -68,25 +87,34 @@ fraction operator/(const fraction& left,
     return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
 }
 
-//bool operator<(const fraction& left,
-//               const fraction& right)
-//{
-//    if (left.feet < right.feet)
-//    { return true; }
-//    if (left.feet > right.feet)
-//    { return false; }
-//    return left.inches < right.inches;
-//}
-//
-//bool operator<(const fraction& left,
-//               const fraction& right)
-//{
-//    if (left.feet < right.feet)
-//    { return true; }
-//    if (left.feet > right.feet)
-//    { return false; }
-//    return left.inches < right.inches;
-//}
+
+bool operator<(const fraction& left,
+               const fraction& right)
+{
+    if (left.numerator / left.denominator < right.numerator / right.denominator)
+    { return true; } else { return false; }
+}
+
+bool operator<=(const fraction& left,
+               const fraction& right)
+{
+    if (left.numerator / left.denominator <= right.numerator / right.denominator)
+    { return true; } else { return false; }
+}
+
+bool operator>(const fraction& left,
+               const fraction& right)
+{
+    if (left.numerator / left.denominator > right.numerator / right.denominator)
+    { return true; } else { return false; }
+}
+
+bool operator>=(const fraction& left,
+                const fraction& right)
+{
+    if (left.numerator / left.denominator >= right.numerator / right.denominator)
+    { return true; } else { return false; }
+}
 
 bool operator==(const fraction& left,
                 const fraction&right)
@@ -96,6 +124,17 @@ bool operator==(const fraction& left,
         return true;
     } else {
         return false;
+    }
+}
+
+bool operator!=(const fraction& left,
+                const fraction&right)
+{
+    if (left.numerator * right.denominator == left.denominator * right.numerator)
+    {
+        return false;
+    } else {
+        return true;
     }
 }
 
