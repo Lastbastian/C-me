@@ -32,7 +32,16 @@
 
  
  */
+#include <iostream>
 #include "a11.h"
+
+using namespace std;
+
+fraction::fraction(int n, int d)
+{
+    numerator = n;
+    denominator = d;
+}
 
 fraction operator+(const fraction& left,
                    const fraction& right)
@@ -88,5 +97,11 @@ bool operator==(const fraction& left,
     } else {
         return false;
     }
+}
+
+ostream& operator<<(ostream& out, const fraction& right)
+{
+    out << right.numerator << "/" << right.denominator;
+    return out;
 }
 

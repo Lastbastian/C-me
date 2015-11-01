@@ -1,5 +1,6 @@
 #ifndef A11
 #define A11
+#include <iostream>
 
 class fraction
 {
@@ -17,18 +18,23 @@ class fraction
                                   const fraction& right);
         friend fraction operator/(const fraction& left,
                                   const fraction& right);
-        friend bool operator<(const fraction &left, const fraction &right);
-        friend bool operator<=(const fraction &left, const fraction &right);
-        friend bool operator>(const fraction &left, const fraction &right);
-        friend bool operator>=(const fraction &left, const fraction &right);
-        friend bool operator==(const fraction &left, const fraction &right);
-        friend bool operator!=(const fraction &left, const fraction &right);
-    
-    
-        friend std::ostream& operator<<(std::ostream& out, const fraction& right);
-
-    
-    
+        friend bool operator<(const fraction &left,
+                              const fraction &right);
+        friend bool operator<=(const fraction &left,
+                               const fraction &right);
+        friend bool operator>(const fraction &left,
+                              const fraction &right);
+        friend bool operator>=(const fraction &left,
+                               const fraction &right);
+        friend bool operator==(const fraction &left,
+                               const fraction &right);
+        friend bool operator!=(const fraction &left,
+                               const fraction &right);
+        friend std::ostream& operator<<(std::ostream& out,
+                                        const fraction& right);
+//    
+//    
+//    
 //    friend operator++();
 //    feetInches operator++(int);
 //    feetInches operator+=(const feetInches& right);
