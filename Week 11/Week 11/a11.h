@@ -42,9 +42,9 @@ class fraction
                                const fraction &right);
         friend bool operator!=(const fraction &left,
                                const fraction &right);
+    
         friend std::ostream& operator<<(std::ostream& out,
                                         const fraction& right);
-
 };
 
 #endif

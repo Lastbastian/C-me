@@ -1,37 +1,14 @@
 /*
+	Name: Chris Bastian
+	Class: CS110B-META-FALL-2015
+	Date: Sunday, Nov. 1st.
+	Instructor: David Harden
+	File Name: a11.cpp
  
- Your class should support the following operations on fraction objects:
- 
- Construction of a fraction from two, one, or zero integer arguments. If two arguments, they are assumed to be the numerator and denominator, just one is assumed to be a whole number, and zero arguments creates a zero fraction. Use default parameters so that you only need a single function to implement all three of these constructors.
- 
- You should check to make sure that the denominator is not set to 0. The easiest way to do this is to use an assert statement: assert(inDenominator != 0); You can put this statement at the top of your constructor. Note that the variable in the assert() is the incoming parameter, not the data member. In order to use assert(), you must #include <cassert>
- 
- For this assignment, you may assume that all fractions are positive. We'll fix that next week.
- 
- Printing a fraction to a stream with an overloaded << operator. Next week we will get fancy with this, but for now just print the numerator, a forward-slash, and the denominator. No need to change improper fractions to mixed numbers, and no need to reduce.
- 
- All six of the relational operators (<, <=, >, >=, ==, !=) should be supported. They should be able to compare fractions to other fractions as well as fractions to integers. Either fractions or integers can appear on either side of the binary comparison operator. You should only use one function for each operator.
- 
- The four basic arithmetic operations (+, -, *, /) should be supported. Again, they should allow fractions to be combined with other fractions, as well as with integers. Either fractions or integers can appear on either side of the binary operator. Only use one function for each operator.
- 
- Note that no special handling is needed to handle the case of dividing by a fraction that is equal to 0. If the client attempts to do this, they will get a runtime error, which is the same behavior they would expect if they tried to divide by an int or double that was equal to 0.
- 
- The shorthand arithmetic assignment operators (+=, -=, *=, /=) should also be implemented. fractions can appear on the left-hand side, and fractions or integers on the right-hand side.
- 
- The increment and decrement (++, --) operators should be supported in both prefix and postfix form for fractions. To increment or decrement a fraction means to add or subtract (respectively) one (1).
- 
- Additional Requirements and Hints:
- You will not be graded on documentation on this assignment. You'll be working on the documentation next week.
- The name of your class must be "fraction". No variations will work.
- Use exactly two data members.
- You should not compare two fractions by dividing the numerator by the denominator. This is not guaranteed to give you the correct result every time, because of the way that double values are stored internally by the computer. I would cross multiply and compare the products.
- Don't go to a lot of trouble to find the common denominator (when adding or subtracting). Simply multiply the denominators together.
- The last two bullets bring up an interesting issue: if your denominators are really big, multiplying them together (or cross multiplying) may give you a number that is too big to store in an int variable. This is called overflow. The rule for this assignment is: don't worry about overflow in these two situations.
- My solution has 20 member functions. All of them are less than 4 lines long. I'm not saying yours has to be like this, but it shouldn't be way off.
- Do not use as a resource a supplementary text or website if it includes a fraction class (or rational or ratio or whatever).
-
+ This program takes input for a fraction object.  The fraction class contains fuctions that add, subtract, multiply, divide, +=, -=, *=, /=, ++, --, >, >=, <, <=, ==, != fraction objects.
  
  */
+
 #include <iostream>
 #include <cassert>
 #include "a11.h"
@@ -45,6 +22,14 @@ fraction::fraction(int inNumerator, int inDenominator)
     denominator = inDenominator;
 }
 
+
+
+
+
+
+
+
+
 void fraction::simplify()
 {
     int gcd_value;
@@ -52,6 +37,14 @@ void fraction::simplify()
     numerator = numerator/gcd_value;
     denominator = denominator/gcd_value;
 }
+
+
+
+
+
+
+
+
 
 int fraction::gcd(int n, int d)
 {
@@ -63,35 +56,62 @@ int fraction::gcd(int n, int d)
     }
 }
 
-// Overloading the pre-increment ++operator
-fraction fraction::operator++()
+
+
+
+
+
+
+
+
+fraction fraction::operator++() // ++g
 {
-    numerator = numerator + denominator;
+    numerator += denominator;
     return *this;
 }
 
-// Overloading the post-increment operator++
-fraction fraction::operator++(int)
+fraction fraction::operator++(int) // g++
 {
-    fraction temp(numerator, denominator);
-    temp.numerator = temp.numerator + temp.denominator;
+    fraction temp(numerator,denominator);
+    numerator += denominator;
     return temp;
 }
 
-// Overloading the pre-increment --operator
-fraction fraction::operator--()
+
+
+
+
+
+
+
+
+fraction fraction::operator--() // --g
 {
-    numerator = numerator - denominator;
+    numerator -= denominator;
     return *this;
 }
 
-// Overloading the post-increment operator--
-fraction fraction::operator--(int)
+
+
+
+
+
+
+
+
+fraction fraction::operator--(int) // g--
 {
     fraction temp(numerator, denominator);
-    temp.numerator = temp.numerator - temp.denominator;
+    numerator -= denominator;
     return temp;
 }
+
+
+
+
+
+
+
 
 
 fraction fraction::operator+=(const fraction& right)
@@ -100,11 +120,27 @@ fraction fraction::operator+=(const fraction& right)
     return *this;
 };
 
+
+
+
+
+
+
+
+
 fraction fraction::operator-=(const fraction& right)
 {
     *this = *this - right;
     return *this;
 }
+
+
+
+
+
+
+
+
 
 fraction fraction::operator*=(const fraction& right)
 {
@@ -112,11 +148,27 @@ fraction fraction::operator*=(const fraction& right)
     return *this;
 }
 
+
+
+
+
+
+
+
+
 fraction fraction::operator/=(const fraction& right)
 {
     *this = *this / right;
     return *this;
 }
+
+
+
+
+
+
+
+
 
 fraction operator+(const fraction& left,
                    const fraction& right)
@@ -124,11 +176,27 @@ fraction operator+(const fraction& left,
     return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
 }
 
+
+
+
+
+
+
+
+
 fraction operator-(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
 }
+
+
+
+
+
+
+
+
 
 fraction operator*(const fraction& left,
                    const fraction& right)
@@ -137,11 +205,27 @@ fraction operator*(const fraction& left,
 
 }
 
+
+
+
+
+
+
+
+
 fraction operator/(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
 }
+
+
+
+
+
+
+
+
 
 bool operator<(const fraction& left,
                const fraction& right)
@@ -149,11 +233,23 @@ bool operator<(const fraction& left,
     return left.numerator * right.denominator < right.numerator * left.denominator;
 }
 
+
+
+
+
 bool operator<=(const fraction& left,
                const fraction& right)
 {
     return left.numerator * right.denominator <= right.numerator * left.denominator;
 }
+
+
+
+
+
+
+
+
 
 bool operator>(const fraction& left,
                const fraction& right)
@@ -161,11 +257,27 @@ bool operator>(const fraction& left,
     return left.numerator * right.denominator > right.numerator * left.denominator;
 }
 
+
+
+
+
+
+
+
+
 bool operator>=(const fraction& left,
                 const fraction& right)
 {
     return left.numerator * right.denominator >= right.numerator * left.denominator;
 }
+
+
+
+
+
+
+
+
 
 bool operator==(const fraction& left,
                 const fraction&right)
@@ -173,11 +285,27 @@ bool operator==(const fraction& left,
     return left.numerator * right.denominator == right.numerator * left.denominator;
 }
 
+
+
+
+
+
+
+
+
 bool operator!=(const fraction& left,
                 const fraction&right)
 {
     return left.numerator * right.denominator != right.numerator * left.denominator;
 }
+
+
+
+
+
+
+
+
 
 ostream& operator<<(ostream& out, const fraction& right)
 {
@@ -185,3 +313,131 @@ ostream& operator<<(ostream& out, const fraction& right)
     return out;
 }
 
+
+
+
+/* OUTPUT
+ 
+ ----- Testing basic fraction creation & printing
+ fraction [0] = 4/8
+ fraction [1] = -15/21
+ fraction [2] = 10/1
+ fraction [3] = 12/-3
+ fraction [4] = 0/1
+ fraction [5] = 28/6
+ fraction [6] = 0/12
+ 
+ ----- Testing relational operators between fractions
+ Comparing 3/6 to 1/2
+	Is left < right? false
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? true
+	Does left == right? true
+	Does left != right ? false
+ Comparing 1/2 to -15/30
+	Is left < right? false
+	Is left <= right? false
+	Is left > right? true
+	Is left >= right? true
+	Does left == right? false
+	Does left != right ? true
+ Comparing -15/30 to 1/10
+	Is left < right? true
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? false
+	Does left == right? false
+	Does left != right ? true
+ Comparing 1/10 to 0/1
+	Is left < right? false
+	Is left <= right? false
+	Is left > right? true
+	Is left >= right? true
+	Does left == right? false
+	Does left != right ? true
+ Comparing 0/1 to 0/2
+	Is left < right? false
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? true
+	Does left == right? true
+	Does left != right ? false
+ 
+ ----- Testing relations between fractions and integers
+ Comparing -3/6 to 2
+	Is left < right? true
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? false
+	Does left == right? false
+	Does left != right ? true
+ Comparing -3 to 1/4
+	Is left < right? true
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? false
+	Does left == right? false
+	Does left != right ? true
+ 
+ ----- Testing binary arithmetic between fractions
+ 1/6 + 1/3 = 9/18
+ 1/6 - 1/3 = -3/18
+ 1/6 * 1/3 = 1/18
+ 1/6 / 1/3 = 3/6
+ 1/3 + -2/3 = -3/9
+ 1/3 - -2/3 = 9/9
+ 1/3 * -2/3 = -2/9
+ 1/3 / -2/3 = 3/-6
+ -2/3 + 5/1 = 13/3
+ -2/3 - 5/1 = -17/3
+ -2/3 * 5/1 = -10/3
+ -2/3 / 5/1 = -2/15
+ 5/1 + -4/3 = 11/3
+ 5/1 - -4/3 = 19/3
+ 5/1 * -4/3 = -20/3
+ 5/1 / -4/3 = 15/-4
+ 
+ ----- Testing arithmetic between fractions and integers
+ -1/2 + 4 = 7/2
+ -1/2 - 4 = -9/2
+ -1/2 * 4 = -4/2
+ -1/2 / 4 = -1/8
+ 3 + -1/2 = 5/2
+ 3 - -1/2 = 7/2
+ 3 * -1/2 = -3/2
+ 3 / -1/2 = 6/-1
+ 
+ ----- Testing shorthand arithmetic assignment on fractions
+ 1/6 += 4/1 = 25/6
+ 25/6 -= 4/1 = 1/6
+ 1/6 *= 4/1 = 4/6
+ 4/6 /= 4/1 = 4/24
+ 4/1 += -1/2 = 7/2
+ 7/2 -= -1/2 = 16/4
+ 16/4 *= -1/2 = -16/8
+ -16/8 /= -1/2 = -32/-8
+ -1/2 += 5/1 = 9/2
+ 9/2 -= 5/1 = -1/2
+ -1/2 *= 5/1 = -5/2
+ -5/2 /= 5/1 = -5/10
+ 
+ ----- Testing shorthand arithmetic assignment using integers
+ -1/3 += 3 = 8/3
+ 8/3 -= 3 = -1/3
+ -1/3 *= 3 = -3/3
+ -3/3 /= 3 = -3/9
+ 
+ ----- Testing increment/decrement prefix and postfix
+ Now g = -1/3
+ g++ = -1/3
+ Now g = 2/3
+ ++g = 5/3
+ Now g = 5/3
+ g-- = 5/3
+ Now g = 2/3
+ --g = -1/3
+ Now g = -1/3
+ Program ended with exit code: 0
+
+*/
