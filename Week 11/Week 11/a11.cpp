@@ -33,22 +33,40 @@
  
  */
 #include <iostream>
+#include <cassert>
 #include "a11.h"
 
 using namespace std;
 
-fraction::fraction(int n, int d)
+fraction::fraction(int inNumerator, int inDenominator)
 {
-    numerator = n;
-    denominator = d;
+    assert(inDenominator != 0);
+    numerator = inNumerator;
+    denominator = inDenominator;
+}
+
+void fraction::simplify()
+{
+    int gcd_value;
+    gcd_value = gcd(numerator, denominator);
+    numerator = numerator/gcd_value;
+    denominator = denominator/gcd_value;
+}
+
+int fraction::gcd(int n, int d)
+{
+    if (d == 0)
+    {
+        return n;
+    } else {
+        return gcd(d, n%d);
+    }
 }
 
 // Overloading the pre-increment ++operator
 fraction fraction::operator++()
 {
-//    numerator * denominator + denominator * numerator, denominator * denominator;
-    denominator++;
-//    feet++;
+    numerator = numerator + denominator;
     return *this;
 }
 
@@ -56,18 +74,14 @@ fraction fraction::operator++()
 fraction fraction::operator++(int)
 {
     fraction temp(numerator, denominator);
-    denominator++;
-//    feetInches temp(feet, inches);
-//    feet++;
+    temp.numerator = temp.numerator + temp.denominator;
     return temp;
 }
 
 // Overloading the pre-increment --operator
 fraction fraction::operator--()
 {
-    //    numerator * denominator + denominator * numerator, denominator * denominator;
-    denominator++;
-    //    feet++;
+    numerator = numerator - denominator;
     return *this;
 }
 
@@ -75,10 +89,33 @@ fraction fraction::operator--()
 fraction fraction::operator--(int)
 {
     fraction temp(numerator, denominator);
-    denominator++;
-    //    feetInches temp(feet, inches);
-    //    feet++;
+    temp.numerator = temp.numerator - temp.denominator;
     return temp;
+}
+
+
+fraction fraction::operator+=(const fraction& right)
+{
+    *this = *this + right;
+    return *this;
+};
+
+fraction fraction::operator-=(const fraction& right)
+{
+    *this = *this - right;
+    return *this;
+}
+
+fraction fraction::operator*=(const fraction& right)
+{
+    *this = *this * right;
+    return *this;
+}
+
+fraction fraction::operator/=(const fraction& right)
+{
+    *this = *this / right;
+    return *this;
 }
 
 fraction operator+(const fraction& left,
@@ -87,19 +124,7 @@ fraction operator+(const fraction& left,
     return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
 }
 
-fraction operator+=(const fraction& left,
-                    const fraction& right)
-{
-    return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
-}
-
 fraction operator-(const fraction& left,
-                   const fraction& right)
-{
-    return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
-}
-
-fraction operator-=(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
@@ -112,74 +137,46 @@ fraction operator*(const fraction& left,
 
 }
 
-fraction operator*=(const fraction& left,
-                   const fraction& right)
-{
-    return fraction(left.numerator * right.numerator, left.denominator * right.denominator);
-    
-}
-
 fraction operator/(const fraction& left,
                    const fraction& right)
 {
     return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
 }
 
-fraction operator/=(const fraction& left,
-                   const fraction& right)
-{
-    return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
-}
-
-
 bool operator<(const fraction& left,
                const fraction& right)
 {
-    if (left.numerator / left.denominator < right.numerator / right.denominator)
-    { return true; } else { return false; }
+    return left.numerator * right.denominator < right.numerator * left.denominator;
 }
 
 bool operator<=(const fraction& left,
                const fraction& right)
 {
-    if (left.numerator / left.denominator <= right.numerator / right.denominator)
-    { return true; } else { return false; }
+    return left.numerator * right.denominator <= right.numerator * left.denominator;
 }
 
 bool operator>(const fraction& left,
                const fraction& right)
 {
-    if (left.numerator / left.denominator > right.numerator / right.denominator)
-    { return true; } else { return false; }
+    return left.numerator * right.denominator > right.numerator * left.denominator;
 }
 
 bool operator>=(const fraction& left,
                 const fraction& right)
 {
-    if (left.numerator / left.denominator >= right.numerator / right.denominator)
-    { return true; } else { return false; }
+    return left.numerator * right.denominator >= right.numerator * left.denominator;
 }
 
 bool operator==(const fraction& left,
                 const fraction&right)
 {
-    if (left.numerator * right.denominator == left.denominator * right.numerator)
-    {
-        return true;
-    } else {
-        return false;
-    }
+    return left.numerator * right.denominator == right.numerator * left.denominator;
 }
 
 bool operator!=(const fraction& left,
                 const fraction&right)
 {
-    if (left.numerator * right.denominator == left.denominator * right.numerator)
-    {
-        return false;
-    } else {
-        return true;
-    }
+    return left.numerator * right.denominator != right.numerator * left.denominator;
 }
 
 ostream& operator<<(ostream& out, const fraction& right)

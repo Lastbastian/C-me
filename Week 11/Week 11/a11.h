@@ -7,30 +7,28 @@ class fraction
     private:
         int numerator;
         int denominator;
+        void simplify();
+        int gcd(int n, int d);
     
     public:
-        fraction(int n = 0, int d = 1);             // Initilization constructor
+        fraction(int inNumerator = 0, int inDenominator = 1);             // Initilization constructor
         fraction operator++();
         fraction operator++(int);
         fraction operator--();
         fraction operator --(int);
+        fraction operator+=(const fraction& right);
+        fraction operator-=(const fraction& right);
+        fraction operator*=(const fraction& right);
+        fraction operator/=(const fraction& right);
     
         friend fraction operator+(const fraction& left,
                                   const fraction& right);
-        friend fraction operator+=(const fraction& left,
-                                const fraction& right);
         friend fraction operator-(const fraction& left,
                                   const fraction& right);
-        friend fraction operator-=(const fraction& left,
-                                   const fraction& right);
         friend fraction operator*(const fraction& left,
                                   const fraction& right);
-        friend fraction operator*=(const fraction& left,
-                                   const fraction& right);
         friend fraction operator/(const fraction& left,
                                   const fraction& right);
-        friend fraction operator/=(const fraction& left,
-                                   const fraction& right);
     
         friend bool operator<(const fraction &left,
                               const fraction &right);

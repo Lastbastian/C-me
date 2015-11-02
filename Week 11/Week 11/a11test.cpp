@@ -5,16 +5,16 @@ using namespace std;
 
 void BasicTest();
 void RelationTest();
-//void BinaryMathTest();
-//void MathAssignTest();
+void BinaryMathTest();
+void MathAssignTest();
 string boolString(bool convertMe);
 
 int main()
 {
     BasicTest();
     RelationTest();
-//    BinaryMathTest();
-//    MathAssignTest();
+    BinaryMathTest();
+    MathAssignTest();
 }
 
 

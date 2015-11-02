@@ -37,5 +37,5 @@ int main()
     } else {
         cout << "x is not less then f1." << endl;
     }
-    cout << (f1 += 7) << endl;
+    cout << (f1 += 7) endl;
 }
