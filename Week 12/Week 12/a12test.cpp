@@ -40,18 +40,18 @@ void BasicTest()
     }
     
     
-//    cout << "\n----- Now reading fractions from file\n";
-//    ifstream in("fraction.txt");
-//    assert(in);
-//    while (!eof(in)) {
-//        fraction f;
-//        if (in.peek() == '#') {
-//            in.ignore(128, '\n');                       //skip this line, it's a comment
-//        } else {
-//            in >> f;
-//            cout << "Read fraction = " << f << endl;
-//        }
-//    }
+    cout << "\n----- Now reading fractions from file\n";
+    ifstream in("fraction.txt");
+    assert(in);
+    while (!eof(in)) {
+        fraction f;
+        if (in.peek() == '#') {
+            in.ignore(128, '\n');                       //skip this line, it's a comment
+        } else {
+            in >> f;
+            cout << "Read fraction = " << f << endl;
+        }
+    }
 }
 
 

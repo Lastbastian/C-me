@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <cassert>
+#include <cmath>
 #include "a12.h"
 
 using namespace std;
@@ -35,8 +36,14 @@ void fraction::simplify()
 {
     int end;
     int gcd_value = 1;
-    end = numerator / 2 ? numerator < denominator : end = denominator / 2;
-    for(int i = 1; i < end; i++ )
+    if (numerator < denominator)
+    {
+        end = abs(numerator);
+    } else
+    {
+        end = abs(denominator);
+    }
+    for(int i = 1; i <= end; i++ )
     {
         if( numerator % i == 0 && denominator % i == 0)
             gcd_value = i;
@@ -306,7 +313,18 @@ bool operator!=(const fraction& left,
 
 ostream& operator<<(ostream& out, const fraction& right)
 {
-    out << right.numerator << "/" << right.denominator;
+    if (right.numerator == 0)
+    {
+        out << 0;
+    } else if (right.denominator == 1 || right.denominator == -1)
+    {
+        out << right.numerator * right.denominator;
+    } else if (right.numerator >= right.denominator)
+    {
+        out << right.numerator / right.denominator << "+" << right.numerator - (right.numerator / right.denominator) * right.denominator << "/" << right.denominator;
+    } else {
+        out << right.numerator << "/" << right.denominator;
+    }
     return out;
 }
 
