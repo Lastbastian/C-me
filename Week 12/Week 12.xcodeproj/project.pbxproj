@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		859B69DD1BEEF42B008EB3B3 /* a12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B69DC1BEEF42B008EB3B3 /* a12.cpp */; };
-		859B69E51BEFE8FA008EB3B3 /* a12test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B69E41BEFE8FA008EB3B3 /* a12test.cpp */; };
+		859B69E91BF01E04008EB3B3 /* a12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B69DC1BEEF42B008EB3B3 /* a12.cpp */; };
+		859B69EA1BF01E0B008EB3B3 /* a12test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B69E41BEFE8FA008EB3B3 /* a12test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				859B69DC1BEEF42B008EB3B3 /* a12.cpp */,
-				859B69E41BEFE8FA008EB3B3 /* a12test.cpp */,
 				859B69E31BEEF4A9008EB3B3 /* a12.h */,
+				859B69E41BEFE8FA008EB3B3 /* a12test.cpp */,
 			);
 			path = "Week 12";
 			sourceTree = "<group>";
@@ -123,8 +123,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859B69E51BEFE8FA008EB3B3 /* a12test.cpp in Sources */,
-				859B69DD1BEEF42B008EB3B3 /* a12.cpp in Sources */,
+				859B69EA1BF01E0B008EB3B3 /* a12test.cpp in Sources */,
+				859B69E91BF01E04008EB3B3 /* a12.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

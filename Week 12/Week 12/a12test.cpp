@@ -1,10 +1,10 @@
 #include <iostream>
-#include "fraction.h"
+#include "a12.h"
 #include <fstream>
 #include <cassert>
 #include <string>
 using namespace std;
-using namespace cs_fraction;
+//using namespace cs_fraction;
 
 void BasicTest();
 void RelationTest();
@@ -17,9 +17,9 @@ string boolString(bool convertMe);
 int main()
 {
     BasicTest();
-    RelationTest();
-    BinaryMathTest();
-    MathAssignTest();
+//    RelationTest();
+//    BinaryMathTest();
+//    MathAssignTest();
 }
 
 
@@ -40,18 +40,18 @@ void BasicTest()
     }
     
     
-    cout << "\n----- Now reading fractions from file\n";
-    ifstream in("fraction.txt");
-    assert(in);
-    while (!eof(in)) {
-        fraction f;
-        if (in.peek() == '#') {
-            in.ignore(128, '\n');                       //skip this line, it's a comment
-        } else {
-            in >> f;
-            cout << "Read fraction = " << f << endl;
-        }
-    }
+//    cout << "\n----- Now reading fractions from file\n";
+//    ifstream in("fraction.txt");
+//    assert(in);
+//    while (!eof(in)) {
+//        fraction f;
+//        if (in.peek() == '#') {
+//            in.ignore(128, '\n');                       //skip this line, it's a comment
+//        } else {
+//            in >> f;
+//            cout << "Read fraction = " << f << endl;
+//        }
+//    }
 }
 
 
