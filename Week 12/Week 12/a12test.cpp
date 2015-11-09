@@ -1,10 +1,10 @@
 #include <iostream>
-#include "a12.h"
+#include "a12.h" // was fraction.h
 #include <fstream>
 #include <cassert>
 #include <string>
 using namespace std;
-//using namespace cs_fraction;
+using namespace cs_fraction;
 
 void BasicTest();
 void RelationTest();
@@ -17,9 +17,9 @@ string boolString(bool convertMe);
 int main()
 {
     BasicTest();
-//    RelationTest();
-//    BinaryMathTest();
-//    MathAssignTest();
+    RelationTest();
+    BinaryMathTest();
+    MathAssignTest();
 }
 
 
