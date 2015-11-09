@@ -20,6 +20,7 @@ fraction::fraction(int inNumerator, int inDenominator)
     assert(inDenominator != 0);
     numerator = inNumerator;
     denominator = inDenominator;
+    simplify();
 }
 
 
@@ -32,28 +33,16 @@ fraction::fraction(int inNumerator, int inDenominator)
 
 void fraction::simplify()
 {
-    int gcd_value;
-    gcd_value = gcd(numerator, denominator);
+    int end;
+    int gcd_value = 1;
+    end = numerator / 2 ? numerator < denominator : end = denominator / 2;
+    for(int i = 1; i < end; i++ )
+    {
+        if( numerator % i == 0 && denominator % i == 0)
+            gcd_value = i;
+    }
     numerator = numerator/gcd_value;
     denominator = denominator/gcd_value;
-}
-
-
-
-
-
-
-
-
-
-int fraction::gcd(int n, int d)
-{
-    if (d == 0)
-    {
-        return n;
-    } else {
-        return gcd(d, n%d);
-    }
 }
 
 
