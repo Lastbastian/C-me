@@ -13,7 +13,8 @@
 #include <iostream>
 #include <cassert>
 #include <cmath>
-#include "a12.h"
+#include <fstream>
+#include "fraction.h"
 
 using namespace std;
 
@@ -39,6 +40,10 @@ namespace cs_fraction {
     {
         int end;
         int gcd_value = 1;
+        if (denominator < 0){
+            numerator *= -1;
+            denominator *= -1;
+        }
         if (numerator < denominator)
         {
             end = abs(numerator);
@@ -56,7 +61,7 @@ namespace cs_fraction {
     }
 
 
-
+//Your simplify() function should also ensure that the denominator is never negative. If the denominator is negative, fix this by multiplying numerator and denominator by -1.
 
 
 
@@ -180,7 +185,12 @@ namespace cs_fraction {
     fraction operator+(const fraction& left,
                        const fraction& right)
     {
-        return fraction(left.numerator * right.denominator + left.denominator * right.numerator, left.denominator * right.denominator);
+        fraction tempFraction;
+        tempFraction.numerator = left.numerator * right.denominator + left.denominator * right.numerator;
+        tempFraction.denominator = left.denominator * right.denominator;
+        
+        tempFraction.simplify();
+        return tempFraction;
     }
 
 
@@ -194,7 +204,12 @@ namespace cs_fraction {
     fraction operator-(const fraction& left,
                        const fraction& right)
     {
-        return fraction(left.numerator * right.denominator - left.denominator * right.numerator, left.denominator * right.denominator);
+        fraction tempFraction;
+        tempFraction.numerator = left.numerator * right.denominator - left.denominator * right.numerator;
+        tempFraction.denominator = left.denominator * right.denominator;
+        
+        tempFraction.simplify();
+        return tempFraction;
     }
 
 
@@ -208,8 +223,12 @@ namespace cs_fraction {
     fraction operator*(const fraction& left,
                        const fraction& right)
     {
-        return fraction(left.numerator * right.numerator, left.denominator * right.denominator);
+        fraction tempFraction;
+        tempFraction.numerator = left.numerator * right.numerator,
+        tempFraction.denominator = left.denominator * right.denominator;
         
+        tempFraction.simplify();
+        return tempFraction;
     }
 
 
@@ -223,7 +242,12 @@ namespace cs_fraction {
     fraction operator/(const fraction& left,
                        const fraction& right)
     {
-        return fraction(left.numerator * right.denominator, left.denominator * right.numerator);
+        fraction tempFraction;
+        tempFraction.numerator = left.numerator * right.denominator;
+        tempFraction.denominator = left.denominator * right.numerator;
+        
+        tempFraction.simplify();
+        return tempFraction;
     }
 
 
@@ -346,22 +370,162 @@ namespace cs_fraction {
         int whole = 0;
         int numerator = 0;
         int denominator;
+        
         in >> temp;
         if (in.peek() == '+'){
-            int whole;
             in >> whole >> dummy >> numerator >> dummy >> denominator;
         } else if (in.peek() == '/'){
             in >> numerator >> dummy >> denominator;
         } else {
-            in >> denominator;
+            in >> numerator;
         }
-        if (whole != 0)
-        {
+        if (whole != 0){
             right.numerator = whole * denominator + numerator;
         } else {
             right.numerator = numerator;
         }
         right.denominator = denominator;
+        
         return in;
     }
 }
+
+
+
+
+
+
+
+
+
+/*  OUTPUT
+ 
+ 
+ ----- Testing basic fraction creation & printing
+ (fractions should be in reduced form, and as mixed numbers.)
+ fraction [0] = 1/2
+ fraction [1] = -5/7
+ fraction [2] = 10
+ fraction [3] = -4
+ fraction [4] = 0
+ fraction [5] = 4+2/3
+ fraction [6] = 0
+ 
+ ----- Now reading fractions from file
+ Read fraction = 0
+ 
+ ----- Testing relational operators between fractions
+ Comparing 1/2 to 1/2
+	Is left < right? false
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? true
+	Does left == right? true
+	Does left != right ? false
+ Comparing 1/2 to -1/2
+	Is left < right? false
+	Is left <= right? false
+	Is left > right? true
+	Is left >= right? true
+	Does left == right? false
+	Does left != right ? true
+ Comparing -1/2 to 1/10
+	Is left < right? true
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? false
+	Does left == right? false
+	Does left != right ? true
+ Comparing 1/10 to 0
+	Is left < right? false
+	Is left <= right? false
+	Is left > right? true
+	Is left >= right? true
+	Does left == right? false
+	Does left != right ? true
+ Comparing 0 to 0
+	Is left < right? false
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? true
+	Does left == right? true
+	Does left != right ? false
+ 
+ ----- Testing relations between fractions and integers
+ Comparing -1/2 to 2
+	Is left < right? true
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? false
+	Does left == right? false
+	Does left != right ? true
+ Comparing -3 to 1/4
+	Is left < right? true
+	Is left <= right? true
+	Is left > right? false
+	Is left >= right? false
+	Does left == right? false
+	Does left != right ? true
+ 
+ ----- Testing binary arithmetic between fractions
+ 1/6 + 1/3 = 1/2
+ 1/6 - 1/3 = -1/6
+ 1/6 * 1/3 = 1/18
+ 1/6 / 1/3 = 1/2
+ 1/3 + -2/3 = -1/3
+ 1/3 - -2/3 = 1
+ 1/3 * -2/3 = -2/9
+ 1/3 / -2/3 = -1/2
+ -2/3 + 5 = 4+1/3
+ -2/3 - 5 = -17/3
+ -2/3 * 5 = -10/3
+ -2/3 / 5 = -2/15
+ 5 + -4/3 = 3+2/3
+ 5 - -4/3 = 6+1/3
+ 5 * -4/3 = -20/3
+ 5 / -4/3 = -15/4
+ 
+ ----- Testing arithmetic between fractions and integers
+ -1/2 + 4 = 3+1/2
+ -1/2 - 4 = -9/2
+ -1/2 * 4 = -2
+ -1/2 / 4 = -1/8
+ 3 + -1/2 = 2+1/2
+ 3 - -1/2 = 3+1/2
+ 3 * -1/2 = -3/2
+ 3 / -1/2 = -6
+ 
+ ----- Testing shorthand arithmetic assignment on fractions
+ 1/6 += 4 = 4+1/6
+ 4+1/6 -= 4 = 1/6
+ 1/6 *= 4 = 2/3
+ 2/3 /= 4 = 1/6
+ 4 += -1/2 = 3+1/2
+ 3+1/2 -= -1/2 = 4
+ 4 *= -1/2 = -2
+ -2 /= -1/2 = 4
+ -1/2 += 5 = 4+1/2
+ 4+1/2 -= 5 = -1/2
+ -1/2 *= 5 = -5/2
+ -5/2 /= 5 = -1/2
+ 
+ ----- Testing shorthand arithmetic assignment using integers
+ -1/3 += 3 = 2+2/3
+ 2+2/3 -= 3 = -1/3
+ -1/3 *= 3 = -1
+ -1 /= 3 = -1/3
+ 
+ ----- Testing increment/decrement prefix and postfix
+ Now g = -1/3
+ g++ = -1/3
+ Now g = 2/3
+ ++g = 1+2/3
+ Now g = 1+2/3
+ g-- = 1+2/3
+ Now g = 2/3
+ --g = -1/3
+ Now g = -1/3
+ Program ended with exit code: 0    
+
+
+*/

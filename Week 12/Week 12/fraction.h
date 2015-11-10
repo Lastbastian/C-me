@@ -4,7 +4,7 @@
 	Class: CS110B-META-FALL-2015
 	Date: Sunday, Nov. 8th.
 	Instructor: David Harden
-	File Name: a12.cpp
+	File Name: fraction.h
  
  This program takes input for a fraction object.  The fraction class contains fuctions that +, -, *, /, +=, -=, *=, /=, ++, --, >, >=, <, <=, ==, != fraction objects.
  
@@ -105,6 +105,7 @@
 #ifndef A12
 #define A12
 #include <iostream>
+#include <fstream>
 
 namespace cs_fraction
 {

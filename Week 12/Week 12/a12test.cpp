@@ -1,5 +1,5 @@
 #include <iostream>
-#include "a12.h" // was fraction.h
+#include "fraction.h"
 #include <fstream>
 #include <cassert>
 #include <string>
@@ -39,9 +39,9 @@ void BasicTest()
         cout << "fraction [" << i <<"] = " << fr[i] << endl;
     }
     
-    
     cout << "\n----- Now reading fractions from file\n";
-    ifstream in("fraction.txt");
+    ifstream in("/Users/chrisbastian/Desktop/code/CCSF/C++/Week 12/Week 12/fraction.txt");
+//    ifstream in("fraction.txt")
     assert(in);
     while (!eof(in)) {
         fraction f;

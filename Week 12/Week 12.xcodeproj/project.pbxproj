@@ -26,10 +26,9 @@
 /* Begin PBXFileReference section */
 		859B69D91BEEF42B008EB3B3 /* Week 12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week 12"; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B69DC1BEEF42B008EB3B3 /* a12.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a12.cpp; sourceTree = "<group>"; };
-		859B69E31BEEF4A9008EB3B3 /* a12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = a12.h; sourceTree = "<group>"; };
+		859B69E31BEEF4A9008EB3B3 /* fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraction.h; sourceTree = "<group>"; };
 		859B69E41BEFE8FA008EB3B3 /* a12test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = a12test.cpp; sourceTree = "<group>"; };
 		859B69EB1BF058E2008EB3B3 /* simplifyMe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplifyMe.cpp; sourceTree = "<group>"; };
-		859B69F41BF14A6B008EB3B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/fraction.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +61,8 @@
 		859B69DB1BEEF42B008EB3B3 /* Week 12 */ = {
 			isa = PBXGroup;
 			children = (
-				859B69F51BF14A6B008EB3B3 /* fraction.txt */,
 				859B69DC1BEEF42B008EB3B3 /* a12.cpp */,
-				859B69E31BEEF4A9008EB3B3 /* a12.h */,
+				859B69E31BEEF4A9008EB3B3 /* fraction.h */,
 				859B69E41BEFE8FA008EB3B3 /* a12test.cpp */,
 				859B69EB1BF058E2008EB3B3 /* simplifyMe.cpp */,
 			);
@@ -133,17 +131,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		859B69F51BF14A6B008EB3B3 /* fraction.txt */ = {
-			isa = PBXVariantGroup;
-			children = (
-				859B69F41BF14A6B008EB3B3 /* en */,
-			);
-			name = fraction.txt;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		859B69DE1BEEF42B008EB3B3 /* Debug */ = {
