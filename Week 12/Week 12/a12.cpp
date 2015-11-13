@@ -366,15 +366,21 @@ namespace cs_fraction {
     istream& operator>>(std::istream& in, fraction& right)
     {
         int temp;
-        int dummy;
+        char dummy;
         int whole = 0;
         int numerator = 0;
         int denominator;
         
         in >> temp;
         if (in.peek() == '+'){
+            
+//            3+1/4
+            
             in >> whole >> dummy >> numerator >> dummy >> denominator;
         } else if (in.peek() == '/'){
+            
+//            10/4
+            
             in >> numerator >> dummy >> denominator;
         } else {
             in >> numerator;
