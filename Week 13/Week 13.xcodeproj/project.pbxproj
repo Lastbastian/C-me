@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		859B6A031BF5D7B3008EB3B3 /* invitemtest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A021BF5D7B3008EB3B3 /* invitemtest.cpp */; };
-		859B6A0B1BF6579A008EB3B3 /* invtItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A0A1BF6579A008EB3B3 /* invtItem.cpp */; };
+		859B6A0F1BFA8EF3008EB3B3 /* ptr_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A0E1BFA8EF3008EB3B3 /* ptr_test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +28,7 @@
 		859B6A091BF5DE3F008EB3B3 /* invitem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = invitem.h; sourceTree = "<group>"; };
 		859B6A0A1BF6579A008EB3B3 /* invtItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = invtItem.cpp; sourceTree = "<group>"; };
 		859B6A0C1BF9750B008EB3B3 /* stringTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringTest.cpp; sourceTree = "<group>"; };
+		859B6A0E1BFA8EF3008EB3B3 /* ptr_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ptr_test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +65,7 @@
 				859B6A091BF5DE3F008EB3B3 /* invitem.h */,
 				859B6A0A1BF6579A008EB3B3 /* invtItem.cpp */,
 				859B6A0C1BF9750B008EB3B3 /* stringTest.cpp */,
+				859B6A0E1BFA8EF3008EB3B3 /* ptr_test.cpp */,
 			);
 			path = "Week 13";
 			sourceTree = "<group>";
@@ -125,8 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859B6A031BF5D7B3008EB3B3 /* invitemtest.cpp in Sources */,
-				859B6A0B1BF6579A008EB3B3 /* invtItem.cpp in Sources */,
+				859B6A0F1BFA8EF3008EB3B3 /* ptr_test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
