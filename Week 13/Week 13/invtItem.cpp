@@ -1,7 +1,8 @@
+// This is the file "invitem.cpp"
+
 #include <iostream>
 #include <cassert>
-#include "invItem.h"
-
+#include "invitem.h"
 using namespace std;
 
 invItem::invItem()
@@ -11,13 +12,36 @@ invItem::invItem()
     strcpy(desc, "");
 }
 
-
 invItem::invItem(const char *inDesc)
 {
     units = 0;
     desc = new char[strlen(inDesc) + 1];
     strcpy(desc, inDesc);
 }
+
+invItem::invItem(const invItem& right)
+{
+    units = right.units;
+    desc = new char[strlen(right.desc) + 1];
+    strcpy(desc, right.desc);
+}
+
+invItem::~invItem()
+{
+    delete [] desc;
+}
+
+invItem invItem::operator=(const invItem& right)
+{
+    if (this != &right){
+        units = right.units;
+        delete [] desc;
+        desc = new char[strlen(right.desc) + 1];
+        strcpy(desc, right.desc);
+    }
+    return *this;
+}
+
 void invItem::setInfo(const char *inDesc, int inUnits)
 {
     units = inUnits;
@@ -37,37 +61,6 @@ ostream& operator<<(ostream& out, const invItem& source)
     return out;
 }
 
-invItem invItem::operator=(const invItem& right)
-{
-    if (this != &right)
-    {
-        units = right.units;
-        delete [] desc;
-        desc = new char[strlen(right.desc) + 1];
-        strcpy(desc, right.desc);
-    }
-    return *this;
-}
-
-invItem::invItem(const invItem& right)
-{
-    units = right.units;
-    desc = new char[strlen(right.desc) + 1];
-    strcpy(desc, right.desc);
-}
-
-char invItem::operator[](int index) const               // returns a value
-{
-    assert(index >= 0 && index < strlen(desc));
-    return desc[index];
-}
-
-char& invItem::operator[](int index)                    // returns a reference
-{
-    assert(index >= 0 && index < strlen(desc));
-    return desc[index];
-}
-
 istream& operator>>(istream& in, invItem& target)
 {
     while (isspace(in.peek())){
@@ -79,6 +72,19 @@ istream& operator>>(istream& in, invItem& target)
     delete [] target.desc;
     target.desc = new char[strlen(temp) + 1];
     strcpy(target.desc, temp);
+    in >> target.units;
     
-    return in;    
+    return in;
+}
+
+char invItem::operator[](int index) const
+{
+    assert(index >= 0 && index < strlen(desc));
+    return desc[index];
+}
+
+char& invItem::operator[](int index)
+{
+    assert(index >= 0 && index < strlen(desc));
+    return desc[index];
 }
