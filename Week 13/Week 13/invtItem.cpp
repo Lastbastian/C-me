@@ -1,5 +1,7 @@
+#include <iostream>
+#include "invItem.h"
 
-invItem()
+invItem::invItem()
 {
     units = 0;
     desc = new char[1];
@@ -7,7 +9,7 @@ invItem()
 }
 
 
-invItem(const char *inDesc)                             // Default constructor
+invItem::invItem(const char *inDesc)
 {
     units = 0;
     desc = new char[strlen(inDesc) + 1];
@@ -21,14 +23,13 @@ void invItem::setInfo(const char *inDesc, int inUnits)
     strcpy(desc, inDesc);
 }
 
-void setUnits(int inUnits)
+void invItem::setUnits(int inUnits)
 {
     units = inUnits;
 }
 
-friend ostream& operator<<(ostream& out, const invItem& printMe)
+ostream& operator<<(ostream& out, const invItem& source)
 {
-
-
-
+    out << source.units << " " << source.desc;
+    return out;
 }

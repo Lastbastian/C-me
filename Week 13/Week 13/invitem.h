@@ -8,7 +8,7 @@ class invItem
 {
     public:
         invItem(); // constructor
-        invItem(const char *inDesc); //
+        invItem(const char *inDesc); // default constructor
         void setInfo(const char *inDesc, int inUnits);
         void setUnits(int inUnits);
         friend ostream& operator<<(ostream& out, const invItem& printMe);
