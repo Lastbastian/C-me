@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		859B6A101BFA97CF008EB3B3 /* invitemtest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A021BF5D7B3008EB3B3 /* invitemtest.cpp */; };
-		859B6A111BFA97D3008EB3B3 /* invtItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A0A1BF6579A008EB3B3 /* invtItem.cpp */; };
+		859B6A141BFBC7A6008EB3B3 /* myString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A121BFBC7A6008EB3B3 /* myString.cpp */; };
+		859B6A151BFBC7C1008EB3B3 /* stringTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859B6A0C1BF9750B008EB3B3 /* stringTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +30,8 @@
 		859B6A0A1BF6579A008EB3B3 /* invtItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = invtItem.cpp; sourceTree = "<group>"; };
 		859B6A0C1BF9750B008EB3B3 /* stringTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringTest.cpp; sourceTree = "<group>"; };
 		859B6A0E1BFA8EF3008EB3B3 /* ptr_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ptr_test.cpp; sourceTree = "<group>"; };
+		859B6A121BFBC7A6008EB3B3 /* myString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = myString.cpp; sourceTree = "<group>"; };
+		859B6A131BFBC7A6008EB3B3 /* myString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myString.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,12 @@
 		859B6A011BF5D7B3008EB3B3 /* Week 13 */ = {
 			isa = PBXGroup;
 			children = (
+				859B6A121BFBC7A6008EB3B3 /* myString.cpp */,
+				859B6A131BFBC7A6008EB3B3 /* myString.h */,
+				859B6A0C1BF9750B008EB3B3 /* stringTest.cpp */,
 				859B6A021BF5D7B3008EB3B3 /* invitemtest.cpp */,
 				859B6A091BF5DE3F008EB3B3 /* invitem.h */,
 				859B6A0A1BF6579A008EB3B3 /* invtItem.cpp */,
-				859B6A0C1BF9750B008EB3B3 /* stringTest.cpp */,
 				859B6A0E1BFA8EF3008EB3B3 /* ptr_test.cpp */,
 			);
 			path = "Week 13";
@@ -127,8 +131,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859B6A101BFA97CF008EB3B3 /* invitemtest.cpp in Sources */,
-				859B6A111BFA97D3008EB3B3 /* invtItem.cpp in Sources */,
+				859B6A151BFBC7C1008EB3B3 /* stringTest.cpp in Sources */,
+				859B6A141BFBC7A6008EB3B3 /* myString.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
