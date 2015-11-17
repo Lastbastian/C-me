@@ -26,3 +26,5 @@ class invItem
 
 
 #endif
+
+// *notes 4 functions you must have with a ptr in a class
