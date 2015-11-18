@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		856D41A61BFD227F009F4A65 /* virtual_derived_function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41A41BFD2226009F4A65 /* virtual_derived_function.cpp */; };
+		856D41A81BFD2C7F009F4A65 /* IntArray.h in Sources */ = {isa = PBXBuildFile; fileRef = 856D41A71BFD2C7F009F4A65 /* IntArray.h */; };
+		856D41AA1BFD2DCB009F4A65 /* IntArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41A91BFD2DCB009F4A65 /* IntArray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,8 @@
 		856D41A01BFD1301009F4A65 /* emptest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = emptest.cpp; sourceTree = "<group>"; };
 		856D41A21BFD1E5D009F4A65 /* derived_functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = derived_functions.cpp; sourceTree = "<group>"; };
 		856D41A41BFD2226009F4A65 /* virtual_derived_function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = virtual_derived_function.cpp; sourceTree = "<group>"; };
+		856D41A71BFD2C7F009F4A65 /* IntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntArray.h; sourceTree = "<group>"; };
+		856D41A91BFD2DCB009F4A65 /* IntArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntArray.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				856D41A01BFD1301009F4A65 /* emptest.cpp */,
 				856D41A21BFD1E5D009F4A65 /* derived_functions.cpp */,
 				856D41A41BFD2226009F4A65 /* virtual_derived_function.cpp */,
+				856D41A71BFD2C7F009F4A65 /* IntArray.h */,
+				856D41A91BFD2DCB009F4A65 /* IntArray.cpp */,
 			);
 			path = "Week 14";
 			sourceTree = "<group>";
@@ -134,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				856D41A61BFD227F009F4A65 /* virtual_derived_function.cpp in Sources */,
+				856D41A81BFD2C7F009F4A65 /* IntArray.h in Sources */,
+				856D41AA1BFD2DCB009F4A65 /* IntArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
