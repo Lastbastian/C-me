@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		856D41A81BFD2C7F009F4A65 /* IntArray.h in Sources */ = {isa = PBXBuildFile; fileRef = 856D41A71BFD2C7F009F4A65 /* IntArray.h */; };
-		856D41AA1BFD2DCB009F4A65 /* IntArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41A91BFD2DCB009F4A65 /* IntArray.cpp */; };
-		856D41AC1BFD3237009F4A65 /* IntArrayTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41AB1BFD3237009F4A65 /* IntArrayTest.cpp */; };
+		856D41AE1BFD350C009F4A65 /* A14test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41AD1BFD350C009F4A65 /* A14test.cpp */; };
+		856D41B11BFD3591009F4A65 /* A14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41B01BFD3591009F4A65 /* A14.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +38,9 @@
 		856D41A71BFD2C7F009F4A65 /* IntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntArray.h; sourceTree = "<group>"; };
 		856D41A91BFD2DCB009F4A65 /* IntArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntArray.cpp; sourceTree = "<group>"; };
 		856D41AB1BFD3237009F4A65 /* IntArrayTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntArrayTest.cpp; sourceTree = "<group>"; };
+		856D41AD1BFD350C009F4A65 /* A14test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = A14test.cpp; sourceTree = "<group>"; };
+		856D41AF1BFD355F009F4A65 /* mystring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mystring.h; sourceTree = "<group>"; };
+		856D41B01BFD3591009F4A65 /* A14.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = A14.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,9 @@
 		856D41911BFD0644009F4A65 /* Week 14 */ = {
 			isa = PBXGroup;
 			children = (
+				856D41AF1BFD355F009F4A65 /* mystring.h */,
+				856D41B01BFD3591009F4A65 /* A14.cpp */,
+				856D41AD1BFD350C009F4A65 /* A14test.cpp */,
 				856D41991BFD0867009F4A65 /* employee.h */,
 				856D41921BFD0644009F4A65 /* employee.cpp */,
 				856D419A1BFD0C7A009F4A65 /* hourlyemp.h */,
@@ -142,9 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856D41B11BFD3591009F4A65 /* A14.cpp in Sources */,
 				856D41A81BFD2C7F009F4A65 /* IntArray.h in Sources */,
-				856D41AC1BFD3237009F4A65 /* IntArrayTest.cpp in Sources */,
-				856D41AA1BFD2DCB009F4A65 /* IntArray.cpp in Sources */,
+				856D41AE1BFD350C009F4A65 /* A14test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
