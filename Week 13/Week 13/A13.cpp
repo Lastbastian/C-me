@@ -1,3 +1,11 @@
+/*
+	Name: Chris Bastian
+	Class: CS110B-META-FALL-2015
+	Date: Sunday, Nov. 15th.
+	Instructor: David Harden
+	File Name: A13.cpp
+ */
+
 #include <iostream>
 #include <cassert>
 #include "mystring.h"
@@ -11,23 +19,57 @@ namespace cs_mystring
         strcpy(string, "");
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     myString::myString(const char *inString)
     {
         string = new char[strlen(inString) + 1];
         strcpy(string, inString);
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     myString::myString(const myString& right)
     {
         string = new char[strlen(right.string) + 1];
         strcpy(string, right.string);
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     myString::~myString()
     {
         delete [] string;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     myString myString::operator=(const myString &right)
     {
         if (this != &right){
@@ -38,12 +80,28 @@ namespace cs_mystring
         return *this;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     ostream& operator<<(ostream& out, const myString& right)
     {
         out << right.string;
         return out;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     istream& operator>>(istream& in, myString& right)
     {
         while (isspace(in.peek())){
@@ -60,6 +118,13 @@ namespace cs_mystring
     }
 
 
+    
+    
+    
+    
+    
+    
+    
     // []overload (value)
     char myString::operator[](int index) const
     {
@@ -68,6 +133,16 @@ namespace cs_mystring
     }
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // []overload (reference)
     char& myString::operator[](int index)
     {
@@ -75,6 +150,14 @@ namespace cs_mystring
         return string[index];
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     bool operator<(const myString& left,
                    const myString& right)
     {
@@ -86,6 +169,14 @@ namespace cs_mystring
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     bool operator<=(const myString& left,
                    const myString& right)
     {
@@ -96,6 +187,14 @@ namespace cs_mystring
             return false;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     bool operator>(const myString& left,
                    const myString& right)
     {
@@ -107,6 +206,14 @@ namespace cs_mystring
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     bool operator>=(const myString& left,
                     const myString& right)
     {
@@ -117,6 +224,14 @@ namespace cs_mystring
             return false;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     bool operator!=(const myString& left,
                     const myString& right)
     {
@@ -128,6 +243,14 @@ namespace cs_mystring
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     bool operator==(const myString& left,
                     const myString& right)
     {
@@ -137,5 +260,18 @@ namespace cs_mystring
         } else {
             return false;
         }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    int myString::length() const
+    {
+        return strlen(string);
     }
 }

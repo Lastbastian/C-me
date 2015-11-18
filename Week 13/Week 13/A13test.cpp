@@ -37,8 +37,8 @@ string boolString(bool convertMe);
 int main()
 {
     BasicTest();
-//    RelationTest();
-//    CopyTest();
+    RelationTest();
+    CopyTest();
 }
 
 
