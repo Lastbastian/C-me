@@ -1,6 +1,8 @@
+
+// This is the file "invitemtest.cpp"
+
 #include <iostream>
 #include "invitem.h"
-
 using namespace std;
 
 void f(invItem item1);
@@ -17,7 +19,7 @@ int main()
     item2.setUnits(9);
     
     cout << "item1 is " << item1 << endl;
-    cout << "item2 is " << item2 << endl;
+    cout << "item2 is " << item2 << endl << endl;
     
     // There are 4 issues that come up when you use
     // a pointer as a data member.  You must include
@@ -37,15 +39,14 @@ int main()
     // incorrect results.  Try it!
     
     item1 = item2;
-    cout << "After item1 = item2, " << endl;
+    cout << "after item1 = item2, " << endl;
     cout << "item1 is " << item1 << endl;
-    cout << "item2 is " << item2 << endl;
+    cout << "item2 is " << item2 << endl << endl;
     
     item2.setInfo("lawn mower", 14);
-    cout << "after item2.setInfo(\"lawn mover\", 14), " << endl;
+    cout << "after item2.setInfo(\"lawn mower\", 14), " << endl;
     cout << "item1 is " << item1 << endl;
-    cout << "item2 is " << item2 << endl;
-    
+    cout << "item2 is " << item2 << endl << endl;
     
     
     
@@ -60,6 +61,7 @@ int main()
     
     
     
+    
     // (2) COPY CONSTRUCTOR
     
     // There are three situations in which C++ makes a copy:
@@ -70,23 +72,20 @@ int main()
     
     // First pass-by-value.  If you take out the copy constructor,
     // the call to f will change the value of item1, even though
-    // pass-by-value was used
+    // pass-by-value was used.
     
     f(item1);
-    cout << "after being used as an argument to pass-by-value parameter";
+    cout << "after being used as an argument to pass-by-value parameter, ";
     cout << endl << "item1 is still " << item1 << endl << endl;
-    
-    
-    
     
     
     // Now initialization.  C++ makes a distinction between
     // assignment and initialization.  Therefore, if you take
     // out the copy constructor, the next 8 lines will give
     // incorrect results, even if = is overloaded.
-
+    
     invItem item3 = item1;
-    // this is esactly equivalent to: invItem item3(item1);
+    // this is exactly equivalent to: invItem item3(item1);
     
     cout << "after invItem item3 = item1;" << endl;
     cout << "item1 is " << item1 << endl;
@@ -100,7 +99,8 @@ int main()
     
     
     
-     // OVERLOADING THE SQUARE BRACKETS
+    
+    // OVERLOADING THE SQUARE BRACKETS
     
     cout << item1[1] << item1[2] << item1[3] << endl;
     item1[1] = 'c';
@@ -109,7 +109,6 @@ int main()
     cout << item1[1] << item1[2] << item1[3] << endl;
     const invItem item4("chair");
     cout << item4[0] << endl;
-    
     
     /* should cause syntax error:
      
@@ -120,11 +119,15 @@ int main()
     
     
     
+    
+    
+    
     // OVERLOADING THE EXTRACTION OPERATOR
     
     cout << "enter two inventory items: ";
     cin >> item1 >> item2;
     cout << "you entered " << item1 << " and " << item2 << endl << endl;
+    
 }
 
 void f(invItem item1)

@@ -1,38 +1,44 @@
-#ifndef A13
-#define A13
+#ifndef MYSTRING_H
+#define MYSTRING_H
 #include <iostream>
+
+using namespace std;
+
 
 namespace cs_mystring
 {
     class myString
     {
-    private:
-        char *string;
+        public:
+            myString();
+            myString(const char *inString);                 // default constructor
         
-    public:
-        myString();
-        myString(const char *inString);                 // default constructor
-        myString(const myString& right);                // copy constructor
-        ~myString();                                    // destructor
-        myString operator=(const myString& right);      // assignment opperator
+            myString(const myString& right);                // copy constructor
         
-        friend std::ostream& operator<<(std::ostream& out, const myString& source);
-        friend std::istream& operator>>(std::istream& in, myString& target);
-        char operator[](int index) const;          // []overload (value)
-        char& operator[](int index);               // []overload (reference)
+            ~myString();                                    // destructor
         
-        friend bool operator<(const myString &left,
-                              const myString &right);
-        friend bool operator<=(const myString &left,
-                               const myString &right);
-        friend bool operator>(const myString &left,
-                              const myString &right);
-        friend bool operator>=(const myString &left,
-                               const myString &right);
-        friend bool operator==(const myString &left,
-                               const myString &right);
-        friend bool operator!=(const myString &left,
-                               const myString &right);
+            myString operator=(const myString& right);      // assignment opperator
+        
+            friend ostream& operator<<(ostream& out, const myString& right);
+            friend istream& operator>>(istream& in, myString& right);
+            
+            char operator[](int index) const;          // []overload (value)
+            char& operator[](int index);               // []overload (reference)
+            
+            friend bool operator<(const myString &left,
+                                  const myString &right);
+            friend bool operator<=(const myString &left,
+                                   const myString &right);
+            friend bool operator>(const myString &left,
+                                  const myString &right);
+            friend bool operator>=(const myString &left,
+                                   const myString &right);
+            friend bool operator==(const myString &left,
+                                   const myString &right);
+            friend bool operator!=(const myString &left,
+                                   const myString &right);
+        private:
+            char *string;
     };
 }
 
