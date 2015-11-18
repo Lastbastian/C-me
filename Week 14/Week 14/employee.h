@@ -15,7 +15,7 @@ class employee
         void changeName(const string& newName);
         void changeSsn(const string& newSsn);
     
-    private:
+    protected:
         string name;
         string ssn;
         double netPay;
