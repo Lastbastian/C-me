@@ -31,7 +31,7 @@
 		859B6A0C1BF9750B008EB3B3 /* A13test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = A13test.cpp; sourceTree = "<group>"; };
 		859B6A0E1BFA8EF3008EB3B3 /* ptr_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ptr_test.cpp; sourceTree = "<group>"; };
 		859B6A121BFBC7A6008EB3B3 /* A13.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = A13.cpp; sourceTree = "<group>"; };
-		859B6A131BFBC7A6008EB3B3 /* myString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myString.h; sourceTree = "<group>"; };
+		859B6A131BFBC7A6008EB3B3 /* mystring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mystring.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		859B6A011BF5D7B3008EB3B3 /* Week 13 */ = {
 			isa = PBXGroup;
 			children = (
-				859B6A131BFBC7A6008EB3B3 /* myString.h */,
+				859B6A131BFBC7A6008EB3B3 /* mystring.h */,
 				859B6A121BFBC7A6008EB3B3 /* A13.cpp */,
 				859B6A0C1BF9750B008EB3B3 /* A13test.cpp */,
 				859B6A091BF5DE3F008EB3B3 /* invitem.h */,

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "myString.h"
+#include "mystring.h"
 using namespace std;
 using namespace cs_mystring;
 
@@ -27,3 +27,113 @@ myString::~myString()
     delete [] string;
 }
 
+myString myString::operator=(const myString &right)
+{
+    if (this != &right){
+        delete [] string;
+        string = new char[strlen(right.string) + 1];
+        strcpy(string, right.string);
+    }
+    return *this;
+}
+
+ostream& operator<<(ostream& out, const myString& source)
+{
+    out << source.string;
+    return out;
+}
+
+istream& operator>>(istream& in, myString& target)
+{
+    while (isspace(in.peek())){
+        in.ignore();
+    }
+    
+    char temp[128];
+    in.getline(temp, 127);
+    delete [] target.string;
+    target.string = new char[strlen(temp) + 1];
+    strcpy(target.string, temp);
+    
+    return in;
+}
+
+
+// []overload (value)
+char myString::operator[](int index) const
+{
+    assert(index >= 0 && index < strlen(string));
+    return string[index];
+}
+
+
+// []overload (reference)
+char& myString::operator[](int index)
+{
+    assert(index >= 0 && index < strlen(string));
+    return string[index];
+}
+
+bool operator<(const myString& left,
+               const myString& right)
+{
+    if(strcmp(left.string, right.string) < 0)
+    {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool operator<=(const myString& left,
+               const myString& right)
+{
+    if(strcmp(left.string, right.string) < 0 || strcmp(left.string, right.string) == 0)
+    {
+        return true;
+    } else
+        return false;
+}
+
+bool operator>(const myString& left,
+               const myString& right)
+{
+    if(strcmp(left.string, right.string) > 0)
+    {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool operator>=(const myString& left,
+                const myString& right)
+{
+    if(strcmp(left.string, right.string) > 0 || strcmp(left.string, right.string) == 0)
+    {
+        return true;
+    } else
+        return false;
+}
+
+bool operator!=(const myString& left,
+                const myString& right)
+{
+    if(strcmp(left.string, right.string) == 0)
+    {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+bool operator==(const myString& left,
+                const myString& right)
+{
+    if(strcmp(left.string, right.string) == 0)
+    {
+        return true;
+    } else {
+        return false;
+    }
+}
