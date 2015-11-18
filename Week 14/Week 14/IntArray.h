@@ -7,12 +7,12 @@ private:
     
 public:
     IntArray(int s);                // Constructor
-    IntArray(const IntArray &);     // Copy Constructor
+    IntArray(const IntArray &obj);     // Copy Constructor
     ~IntArray();                    // Destructor
     
     int size() const                // Returns the array size
     {return arraySize;}
     
-    int &operator[](const int &);   // Overloaded [] operator
+    int &operator[](const int &sub);   // Overloaded [] operator
 };
 
