@@ -26,6 +26,7 @@
 		856D418F1BFD0644009F4A65 /* Week 14 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week 14"; sourceTree = BUILT_PRODUCTS_DIR; };
 		856D41921BFD0644009F4A65 /* employee.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = employee.cpp; sourceTree = "<group>"; };
 		856D41991BFD0867009F4A65 /* employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = employee.h; sourceTree = "<group>"; };
+		856D419A1BFD0C7A009F4A65 /* hourlyemp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hourlyemp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				856D41921BFD0644009F4A65 /* employee.cpp */,
+				856D419A1BFD0C7A009F4A65 /* hourlyemp.h */,
 				856D41991BFD0867009F4A65 /* employee.h */,
 			);
 			path = "Week 14";

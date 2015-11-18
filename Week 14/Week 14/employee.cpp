@@ -1,7 +1,5 @@
 #include "employee.h"
-#include <iostream>
 #include <string>
-
 using namespace std;
 
 employee::employee()
@@ -16,5 +14,22 @@ employee::employee(const string& newName, const string& newSsn)
     netPay = 0;
 }
 
+void employee::changeName(const string& newName)
+{
+    name = newName;
+}
 
+void employee::changeSsn(const string& newSsn)
+{
+    ssn = newSsn;
+}
 
+string employee::getName() const
+{
+    return name;
+}
+
+string employee::getSsn() const
+{
+    return ssn;
+}
