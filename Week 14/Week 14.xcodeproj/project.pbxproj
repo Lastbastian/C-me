@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		856D41931BFD0644009F4A65 /* employee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D41921BFD0644009F4A65 /* employee.cpp */; };
+		856D419C1BFD0E4A009F4A65 /* hourlyemp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D419B1BFD0E4A009F4A65 /* hourlyemp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		856D41921BFD0644009F4A65 /* employee.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = employee.cpp; sourceTree = "<group>"; };
 		856D41991BFD0867009F4A65 /* employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = employee.h; sourceTree = "<group>"; };
 		856D419A1BFD0C7A009F4A65 /* hourlyemp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hourlyemp.h; sourceTree = "<group>"; };
+		856D419B1BFD0E4A009F4A65 /* hourlyemp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hourlyemp.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				856D41921BFD0644009F4A65 /* employee.cpp */,
 				856D419A1BFD0C7A009F4A65 /* hourlyemp.h */,
+				856D419B1BFD0E4A009F4A65 /* hourlyemp.cpp */,
 				856D41991BFD0867009F4A65 /* employee.h */,
 			);
 			path = "Week 14";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				856D41931BFD0644009F4A65 /* employee.cpp in Sources */,
+				856D419C1BFD0E4A009F4A65 /* hourlyemp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
