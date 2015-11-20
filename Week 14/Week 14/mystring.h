@@ -28,11 +28,16 @@ namespace cs_mystring
         
         myString operator=(const myString& right);      // assignment opperator
         
+        // insertion operator
         friend ostream& operator<<(ostream& out, const myString& right);
+        // extraction operator
         friend istream& operator>>(istream& in, myString& right);
         
-        char operator[](int index) const;          // []overload (value)
-        char& operator[](int index);               // []overload (reference)
+        char operator[](int index) const;               // []overload (value)
+        char& operator[](int index);                    // []overload (reference)
+        
+        friend myString operator+(const myString& left,
+                                  const myString& right);
         
         friend bool operator<(const myString &left,
                               const myString &right);
@@ -46,8 +51,12 @@ namespace cs_mystring
                                const myString &right);
         friend bool operator!=(const myString &left,
                                const myString &right);
+        friend myString operator+(const myString& left,
+                                  const myString& right);
         
         int length() const;
+        void read(istream& in, char);
+        
         
     private:
         char *string;

@@ -157,6 +157,20 @@ namespace cs_mystring
     
     
     
+    /* +overload - conncatenation operator
+    
+    Overload the + operator to do myString concatenation. The operator must be able to handle either myString objects or C-strings on either side of the operator. Be careful with the memory management here. You'll have to allocate enough memory to hold the new myString. I suggest using strcpy() to get the left operand into the result myString, and then strcat() to append the right operand. Both strcpy() and strcat() should be used as if they are void, even though they do have return values.
+  */  
+    
+    myString myString::operator+(const myString& left,
+                                 const myString& right)
+    {
+        left.string
+    }
+    
+    
+    
+    
     
     bool operator<(const myString& left,
                    const myString& right)
@@ -273,5 +287,24 @@ namespace cs_mystring
     int myString::length() const
     {
         return strlen(string);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    void myString::read(istream& in, char delChar)
+    {
+        while (isspace(in.peek())){
+            in.ignore();
+        }
+        
+        char temp[128];
+        in.getline(temp, 127, delChar);
+        strcpy(string, temp);
     }
 }
