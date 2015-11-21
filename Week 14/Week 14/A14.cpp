@@ -160,12 +160,20 @@ namespace cs_mystring
     /* +overload - conncatenation operator
     
     Overload the + operator to do myString concatenation. The operator must be able to handle either myString objects or C-strings on either side of the operator. Be careful with the memory management here. You'll have to allocate enough memory to hold the new myString. I suggest using strcpy() to get the left operand into the result myString, and then strcat() to append the right operand. Both strcpy() and strcat() should be used as if they are void, even though they do have return values.
-  */  
+  */
     
     myString myString::operator+(const myString& left,
                                  const myString& right)
     {
-        left.string
+        if (this != &right){
+            char temp[strlen(left.string)]
+            strcpy(string, temp);
+            delete [] string;
+            string = new char[strlen(right.string) + 1 + strlen(left.string) + 1];
+            
+            strcpy(string, right.string);
+        }
+        return *this;
     }
     
     
