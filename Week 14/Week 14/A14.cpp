@@ -165,15 +165,13 @@ namespace cs_mystring
     myString myString::operator+(const myString& left,
                                  const myString& right)
     {
-        if (this != &right){
-            char temp[strlen(left.string)]
-            strcpy(string, temp);
-            delete [] string;
-            string = new char[strlen(right.string) + 1 + strlen(left.string) + 1];
-            
-            strcpy(string, right.string);
-        }
-        return *this;
+        char temp[128];
+        strcat(temp, left.string);
+        strcat(temp, right.string);
+        delete [] left.string;
+        left.string = new char[strlen(right.string) + 1 + strlen(left.string) + 1];
+        strcpy(left.string, temp);
+
     }
     
     
