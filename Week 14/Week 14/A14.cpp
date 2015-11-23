@@ -175,6 +175,13 @@ namespace cs_mystring
     }
     
     
+    myString myString::operator+=(const myString& right)
+    {
+        *this = *this + right;
+        return *this;
+    };
+    
+    
     
     
     
