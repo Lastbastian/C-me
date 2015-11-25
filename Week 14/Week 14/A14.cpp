@@ -4,6 +4,9 @@
 	Date: Sunday, Nov. 22nd.
 	Instructor: David Harden
 	File Name: A14.cpp
+ 
+  Class Invariant: private data members is string which is used to construct a myString object.
+ 
  */
 
 #include <iostream>
@@ -109,7 +112,7 @@ namespace cs_mystring
         }
         
         char temp[128];
-        in.getline(temp, 127);
+        in.getline(temp, 127, ' ');
         delete [] right.string;
         right.string = new char[strlen(temp) + 1];
         strcpy(right.string, temp);
@@ -157,10 +160,6 @@ namespace cs_mystring
     
     
     
-    /* +overload - conncatenation operator
-    
-    Overload the + operator to do myString concatenation. The operator must be able to handle either myString objects or C-strings on either side of the operator. Be careful with the memory management here. You'll have to allocate enough memory to hold the new myString. I suggest using strcpy() to get the left operand into the result myString, and then strcat() to append the right operand. Both strcpy() and strcat() should be used as if they are void, even though they do have return values.
-  */
     
     myString operator+(const myString& left,
                                  const myString& right)
