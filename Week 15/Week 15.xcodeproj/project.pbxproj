@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85113CD01C0A2FD700A90278 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CCF1C0A2FD700A90278 /* main.cpp */; };
+		85113CD01C0A2FD700A90278 /* GradedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CCF1C0A2FD700A90278 /* GradedActivity.cpp */; };
+		85113CD81C0A4F9E00A90278 /* GradedActivityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CD71C0A4F9E00A90278 /* GradedActivityTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +25,10 @@
 
 /* Begin PBXFileReference section */
 		85113CCC1C0A2FD700A90278 /* Week 15 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week 15"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85113CCF1C0A2FD700A90278 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		85113CCF1C0A2FD700A90278 /* GradedActivity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GradedActivity.cpp; sourceTree = "<group>"; };
 		85113CD61C0A495600A90278 /* GradedActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradedActivity.h; sourceTree = "<group>"; };
+		85113CD71C0A4F9E00A90278 /* GradedActivityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GradedActivityTest.cpp; sourceTree = "<group>"; };
+		85113CD91C0A513F00A90278 /* FinalExam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalExam.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +61,10 @@
 		85113CCE1C0A2FD700A90278 /* Week 15 */ = {
 			isa = PBXGroup;
 			children = (
-				85113CCF1C0A2FD700A90278 /* main.cpp */,
 				85113CD61C0A495600A90278 /* GradedActivity.h */,
+				85113CD91C0A513F00A90278 /* FinalExam.h */,
+				85113CCF1C0A2FD700A90278 /* GradedActivity.cpp */,
+				85113CD71C0A4F9E00A90278 /* GradedActivityTest.cpp */,
 			);
 			path = "Week 15";
 			sourceTree = "<group>";
@@ -120,7 +125,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85113CD01C0A2FD700A90278 /* main.cpp in Sources */,
+				85113CD01C0A2FD700A90278 /* GradedActivity.cpp in Sources */,
+				85113CD81C0A4F9E00A90278 /* GradedActivityTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

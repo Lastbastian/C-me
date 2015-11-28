@@ -4,19 +4,25 @@
 
 class GradedActivity
 {
-private:
-    GradedActivity()                    // Default Constructor
-        { score = 0;  }
     
-    GradedActivity(double s)            // Constructor
-        { score = s; }
+    private:
+        double score;
     
-    void setScore(double s)             // Mutator
-        { score = s; }
-    
-    doubl getScore() const              // Accessor
-        { return score; }
-};
+    public:
+        GradedActivity()                    // Default Constructor
+            { score = 0;  }
+        
+        GradedActivity(double s)            // Constructor
+            { score = s; }
+        
+        void setScore(double s)             // Mutator
+            { score = s; }
+        
+        double getScore() const              // Accessor
+            { return score; }
 
+
+        char getLetterGrade() const;
+};
 
 #endif
