@@ -5,12 +5,12 @@
 class GradedActivity
 {
     
-    private:
+    protected:
         double score;
     
     public:
         GradedActivity()                    // Default Constructor
-            { score = 0;  }
+            { score = 0.0;  }
         
         GradedActivity(double s)            // Constructor
             { score = s; }

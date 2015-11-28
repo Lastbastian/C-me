@@ -22,7 +22,8 @@ class FinalExam : public GradedActivity         // delcared derivitive of Graded
             set(questions, missed);
         }
     
-        void set(int, int);                      // Mutator function
+        void set(int, int);                     // Mutator function
+        void adjustScore();                     // Mutator function accessing the protected var score in                                                                                        GradedActivity class
     
         double getNumQuestions() const          // Accessor function
         {
