@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85113CEB1C0A81CD00A90278 /* CurvedActivityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CEA1C0A81CD00A90278 /* CurvedActivityTest.cpp */; };
-		85113CEC1C0A846B00A90278 /* GradedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CCF1C0A2FD700A90278 /* GradedActivity.cpp */; };
+		85113CEF1C0A876F00A90278 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CEE1C0A876F00A90278 /* Creature.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +36,11 @@
 		85113CE81C0A7A5F00A90278 /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
 		85113CE91C0A7F9600A90278 /* CurvedActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurvedActivity.h; sourceTree = "<group>"; };
 		85113CEA1C0A81CD00A90278 /* CurvedActivityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurvedActivityTest.cpp; sourceTree = "<group>"; };
+		85113CED1C0A872C00A90278 /* Creature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
+		85113CEE1C0A876F00A90278 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
+		85113CF01C0A908100A90278 /* Demon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demon.h; sourceTree = "<group>"; };
+		85113CF11C0A912C00A90278 /* Elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Elf.h; sourceTree = "<group>"; };
+		85113CF21C0A914F00A90278 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,11 @@
 				85113CDC1C0A686F00A90278 /* FinalExamTest.cpp */,
 				85113CDF1C0A6D0B00A90278 /* FinalExamTest2.cpp */,
 				85113CEA1C0A81CD00A90278 /* CurvedActivityTest.cpp */,
+				85113CED1C0A872C00A90278 /* Creature.h */,
+				85113CF01C0A908100A90278 /* Demon.h */,
+				85113CF11C0A912C00A90278 /* Elf.h */,
+				85113CF21C0A914F00A90278 /* Human.h */,
+				85113CEE1C0A876F00A90278 /* Creature.cpp */,
 			);
 			path = "Week 15";
 			sourceTree = "<group>";
@@ -141,8 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85113CEB1C0A81CD00A90278 /* CurvedActivityTest.cpp in Sources */,
-				85113CEC1C0A846B00A90278 /* GradedActivity.cpp in Sources */,
+				85113CEF1C0A876F00A90278 /* Creature.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
