@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85113CEF1C0A876F00A90278 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CEE1C0A876F00A90278 /* Creature.cpp */; };
+		85113CF61C0AD64500A90278 /* Creaturetest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CF51C0AD64500A90278 /* Creaturetest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		85113CF21C0A914F00A90278 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
 		85113CF31C0AC67900A90278 /* Cyberdemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cyberdemon.h; sourceTree = "<group>"; };
 		85113CF41C0AC6E200A90278 /* Balrog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Balrog.h; sourceTree = "<group>"; };
+		85113CF51C0AD64500A90278 /* Creaturetest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creaturetest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				85113CF31C0AC67900A90278 /* Cyberdemon.h */,
 				85113CF41C0AC6E200A90278 /* Balrog.h */,
 				85113CEE1C0A876F00A90278 /* Creature.cpp */,
+				85113CF51C0AD64500A90278 /* Creaturetest.cpp */,
 			);
 			path = "Week 15";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85113CF61C0AD64500A90278 /* Creaturetest.cpp in Sources */,
 				85113CEF1C0A876F00A90278 /* Creature.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
