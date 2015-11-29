@@ -1,6 +1,6 @@
+#ifndef ELF_H
+#define ELF_H
 #include "Creature.h"
-#include <iostream>
-
 
 class elf : public creature
 {
