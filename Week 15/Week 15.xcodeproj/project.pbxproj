@@ -39,11 +39,6 @@
 		85113CEA1C0A81CD00A90278 /* CurvedActivityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurvedActivityTest.cpp; sourceTree = "<group>"; };
 		85113CED1C0A872C00A90278 /* Creature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
 		85113CEE1C0A876F00A90278 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
-		85113CF01C0A908100A90278 /* Demon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demon.h; sourceTree = "<group>"; };
-		85113CF11C0A912C00A90278 /* Elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Elf.h; sourceTree = "<group>"; };
-		85113CF21C0A914F00A90278 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
-		85113CF31C0AC67900A90278 /* Cyberdemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cyberdemon.h; sourceTree = "<group>"; };
-		85113CF41C0AC6E200A90278 /* Balrog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Balrog.h; sourceTree = "<group>"; };
 		85113CF51C0AD64500A90278 /* Creaturetest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creaturetest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,11 +86,6 @@
 				85113CEA1C0A81CD00A90278 /* CurvedActivityTest.cpp */,
 				85113CED1C0A872C00A90278 /* Creature.h */,
 				85113CEE1C0A876F00A90278 /* Creature.cpp */,
-				85113CF21C0A914F00A90278 /* Human.h */,
-				85113CF11C0A912C00A90278 /* Elf.h */,
-				85113CF01C0A908100A90278 /* Demon.h */,
-				85113CF31C0AC67900A90278 /* Cyberdemon.h */,
-				85113CF41C0AC6E200A90278 /* Balrog.h */,
 				85113CF51C0AD64500A90278 /* Creaturetest.cpp */,
 			);
 			path = "Week 15";
