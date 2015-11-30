@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		85113CEF1C0A876F00A90278 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CEE1C0A876F00A90278 /* Creature.cpp */; };
 		85113CF61C0AD64500A90278 /* Creaturetest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CF51C0AD64500A90278 /* Creaturetest.cpp */; };
+		85113CFC1C0D106500A90278 /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CFB1C0D106500A90278 /* Human.cpp */; };
+		85113CFF1C0D12C100A90278 /* Elf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113CFE1C0D12C100A90278 /* Elf.cpp */; };
+		85113D021C0D140300A90278 /* Demon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113D011C0D140200A90278 /* Demon.cpp */; };
+		85113D051C0D14CC00A90278 /* Cyberdemon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113D041C0D14CC00A90278 /* Cyberdemon.cpp */; };
+		85113D081C0D154300A90278 /* Balrog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85113D061C0D154300A90278 /* Balrog.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +45,16 @@
 		85113CED1C0A872C00A90278 /* Creature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
 		85113CEE1C0A876F00A90278 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
 		85113CF51C0AD64500A90278 /* Creaturetest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creaturetest.cpp; sourceTree = "<group>"; };
+		85113CFA1C0D101500A90278 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		85113CFB1C0D106500A90278 /* Human.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
+		85113CFD1C0D126000A90278 /* Elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Elf.h; sourceTree = "<group>"; };
+		85113CFE1C0D12C100A90278 /* Elf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Elf.cpp; sourceTree = "<group>"; };
+		85113D001C0D137800A90278 /* Demon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demon.h; sourceTree = "<group>"; };
+		85113D011C0D140200A90278 /* Demon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Demon.cpp; sourceTree = "<group>"; };
+		85113D031C0D144800A90278 /* Cyberdemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cyberdemon.h; sourceTree = "<group>"; };
+		85113D041C0D14CC00A90278 /* Cyberdemon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cyberdemon.cpp; sourceTree = "<group>"; };
+		85113D061C0D154300A90278 /* Balrog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Balrog.cpp; sourceTree = "<group>"; };
+		85113D071C0D154300A90278 /* Balrog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balrog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +101,16 @@
 				85113CEA1C0A81CD00A90278 /* CurvedActivityTest.cpp */,
 				85113CED1C0A872C00A90278 /* Creature.h */,
 				85113CEE1C0A876F00A90278 /* Creature.cpp */,
+				85113CFA1C0D101500A90278 /* Human.h */,
+				85113CFB1C0D106500A90278 /* Human.cpp */,
+				85113CFD1C0D126000A90278 /* Elf.h */,
+				85113CFE1C0D12C100A90278 /* Elf.cpp */,
+				85113D001C0D137800A90278 /* Demon.h */,
+				85113D011C0D140200A90278 /* Demon.cpp */,
+				85113D031C0D144800A90278 /* Cyberdemon.h */,
+				85113D041C0D14CC00A90278 /* Cyberdemon.cpp */,
+				85113D071C0D154300A90278 /* Balrog.h */,
+				85113D061C0D154300A90278 /* Balrog.cpp */,
 				85113CF51C0AD64500A90278 /* Creaturetest.cpp */,
 			);
 			path = "Week 15";
@@ -148,7 +173,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				85113CF61C0AD64500A90278 /* Creaturetest.cpp in Sources */,
+				85113D081C0D154300A90278 /* Balrog.cpp in Sources */,
 				85113CEF1C0A876F00A90278 /* Creature.cpp in Sources */,
+				85113D021C0D140300A90278 /* Demon.cpp in Sources */,
+				85113D051C0D14CC00A90278 /* Cyberdemon.cpp in Sources */,
+				85113CFC1C0D106500A90278 /* Human.cpp in Sources */,
+				85113CFF1C0D12C100A90278 /* Elf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

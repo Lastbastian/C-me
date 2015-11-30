@@ -1,7 +1,13 @@
 #include "Creature.h"
+#include "Human.h"
+#include "Elf.h"
+#include "Demon.h"
+#include "Cyberdemon.h"
+#include "Balrog.h"
 #include <iostream>
 
 using namespace std;
+using namespace cs_creature;
 
 int main() {
     srand(time(0));
