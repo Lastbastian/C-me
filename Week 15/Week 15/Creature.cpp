@@ -14,7 +14,8 @@ creature::creature(int newType, int newStrength, int newHitpoints)
     hitpoints = newHitpoints;
 }
 
-int creature::getDamage() {
+int creature::getDamage() const
+{
     int damage;
     
     // All creatures inflict damage which is a random number up to their strength
