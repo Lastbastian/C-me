@@ -1,28 +1,37 @@
 #include "Creature.h"
 
+// Creature class functions
 creature::creature()                  // default constructor
 {
-    type = 0;
     strength = 10;
     hitpoints = 10;
 }
 
-creature::creature(int newType, int newStrength, int newHitpoints)
+creature::creature(int newStrength, int newHitpoints)
 {
-    type = newType;
     strength = newStrength;
     hitpoints = newHitpoints;
 }
+
+int creature::getStrength() const
+{ return strength; }
+
+int creature::getHitPoints() const
+{ return hitpoints; }
+
+void creature::setStrength(int newStrength)
+{ strength = newStrength; }
+
+void creature::setHitPoints(int newHitpoints)
+{ hitpoints = newHitpoints; }
 
 int creature::getDamage() const
 {
     int damage;
     
-    // All creatures inflict damage which is a random number up to their strength
     damage = (rand() % strength) + 1;
     cout << getSpecies() << " attacks for " << damage << " points!" << endl;
     
-    // Demons can inflict damage of 50 with a 25% chance
     if (type == 2 || type == 1){
         if (rand() % 4 == 0) {
             damage = damage + 50;
@@ -30,7 +39,6 @@ int creature::getDamage() const
         }
     }
     
-    // Elves inflict double magical damage with a 50% chance
     if (type == 3) {
         if ((rand() % 2) == 0) {
             cout << "Magical attack inflicts " << damage << " additional damage points!" << endl;
@@ -38,7 +46,6 @@ int creature::getDamage() const
         }
     }
     
-    // Balrogs are so fast they get to attack twice
     if (type == 2) {
         int damage2 = (rand() % strength) + 1;
         cout << "Balrog speed attack inflicts " << damage2 << " additional damage points!" << endl;
@@ -47,3 +54,34 @@ int creature::getDamage() const
     
     return damage;
 }
+
+string getSpecies() const
+{   return "Creature"; }
+
+//human class functions
+human::human() : creature()
+{   }
+
+human::human(int newType, int newStrength, int newHitpoints) : creature(strength, hitpoints)
+{
+    type = newType;
+    
+}
+string human::getSpecies() const
+    { return "Human"; }
+
+//elf class functions
+elf::elf() : creature()
+{}
+
+elf::elf(int newType, int newStrength, int newHitpoints) : creature(strength, hitpoints)
+{}
+string elf::getSpecies() const
+    { return "Elf"; }
+
+//demon class functions
+string demon::getSpecies() const
+    { return "Demon"; }
+
+
+
