@@ -1,3 +1,11 @@
+/*
+	Name: Chris Bastian
+	Class: CS110B-META-FALL-2015
+	Date: Sunday, Dec. 6th.
+	Instructor: David Harden
+	File Name: CreatureTest2.cpp
+ */
+
 #include "Creature.h"
 #include "Human.h"
 #include "Elf.h"
@@ -10,10 +18,6 @@
 
 using namespace std;
 using namespace cs_creature;
-
-/*
- Make a function in your client program that is called from your main function, battleArena(creature &creature1, creature& creature2), that takes two creature objects as parameters. The function should calculate the damage done by creature1, subtract that amount from creature2's hitpoints, and vice versa. If both creatures end up with 0 or fewer hitpoints, then the battle results in a tie. Otherwise, at the end of a round, if one creature has positive hitpoints but the other does not, the battle is over. The function should loop until either a tie or over. Since the getDamage() function is virtual it should invoke the getDamage() function defined for the appropriate creature. Test your program with several battles involving different creatures. I've provided a sample main function below. Your only remaining task is to write the "battleArena" function and expand the main function so that the "battleArena" function is tested with a variety of different creatures.
- */
 
 void battleArena(creature &creature1, creature& creature2)
 {
@@ -70,3 +74,94 @@ int main()
     
     return 0;
 }
+
+
+/*  OUTPUT
+ 
+ ***** BATTLE ARENA RESULTS *****
+ 
+ Elf attacks Balrog
+ The Elf's total damage to the Balrog is 8
+ The Balrog attacks for 24 points!
+ Balrog speed attack inflicts 31 additional damage points!
+ The Balrog's total damage to the Elf is 55
+ Round 1 is a tie and the battle rages on!
+ Elf attacks Balrog
+ Magical attack inflicts 23 additional damage points!
+ The Elf's total damage to the Balrog is 46
+ The Balrog attacks for 29 points!
+ Balrog speed attack inflicts 10 additional damage points!
+ The Balrog's total damage to the Elf is 39
+ Round 2 is a tie and the battle rages on!
+ Elf attacks Balrog
+ The Elf's total damage to the Balrog is 41
+ The Balrog attacks for 43 points!
+ Balrog speed attack inflicts 38 additional damage points!
+ The Balrog's total damage to the Elf is 81
+ The Elf has died.
+ 
+ ***** BATTLE ARENA RESULTS *****
+ 
+ Elf attacks Human
+ The Elf's total damage to the Human is 4
+ The Human attacks for 30 points!
+ The Human's total damage to the Elf is 30
+ Round 1 is a tie and the battle rages on!
+ Elf attacks Human
+ Magical attack inflicts 41 additional damage points!
+ The Elf's total damage to the Human is 82
+ The Human attacks for 4 points!
+ The Human's total damage to the Elf is 4
+ Round 2 is a tie and the battle rages on!
+ Elf attacks Human
+ The Elf's total damage to the Human is 20
+ The Human attacks for 8 points!
+ The Human's total damage to the Elf is 8
+ Round 3 is a tie and the battle rages on!
+ Elf attacks Human
+ The Elf's total damage to the Human is 11
+ The Human attacks for 50 points!
+ The Human's total damage to the Elf is 50
+ The Human has died.
+ 
+ ***** BATTLE ARENA RESULTS *****
+ 
+ Cyberdemon attacks Human
+ The Cyberdemon attacks for 29 points!
+ Demonic attack inflicts 50 additional damage points!
+ The Cyberdemon's total damage to the Human is 79
+ The Human attacks for 36 points!
+ The Human's total damage to the Cyberdemon is 36
+ Round 1 is a tie and the battle rages on!
+ Cyberdemon attacks Human
+ The Cyberdemon attacks for 48 points!
+ The Cyberdemon's total damage to the Human is 48
+ The Human attacks for 13 points!
+ The Human's total damage to the Cyberdemon is 13
+ The Human has died.
+ 
+ ***** BATTLE ARENA RESULTS *****
+ 
+ Balrog attacks Cyberdemon
+ The Balrog attacks for 18 points!
+ Balrog speed attack inflicts 34 additional damage points!
+ The Balrog's total damage to the Cyberdemon is 52
+ The Cyberdemon attacks for 30 points!
+ The Cyberdemon's total damage to the Balrog is 30
+ Round 1 is a tie and the battle rages on!
+ Balrog attacks Cyberdemon
+ The Balrog attacks for 30 points!
+ Balrog speed attack inflicts 18 additional damage points!
+ The Balrog's total damage to the Cyberdemon is 48
+ The Cyberdemon attacks for 23 points!
+ The Cyberdemon's total damage to the Balrog is 23
+ Round 2 is a tie and the battle rages on!
+ Balrog attacks Cyberdemon
+ The Balrog attacks for 37 points!
+ Balrog speed attack inflicts 46 additional damage points!
+ The Balrog's total damage to the Cyberdemon is 83
+ The Cyberdemon attacks for 29 points!
+ The Cyberdemon's total damage to the Balrog is 29
+ The Cyberdemon has died.
+ Program ended with exit code: 0
+*/

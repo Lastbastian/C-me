@@ -1,3 +1,11 @@
+/*
+	Name: Chris Bastian
+	Class: CS110B-META-FALL-2015
+	Date: Sunday, Dec. 6th.
+	Instructor: David Harden
+	File Name: Creature.h
+ */
+
 #ifndef CREATURE_H
 #define CREATURE_H
 #include <iostream>
