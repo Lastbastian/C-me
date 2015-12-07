@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		853368FA1C150B3A00743C84 /* virtual_reference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 853368F91C150B3A00743C84 /* virtual_reference.cpp */; };
+		8584A1F51C160D2300C6014F /* PassFailActivityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1F41C160D2300C6014F /* PassFailActivityTest.cpp */; };
+		8584A1F71C160F2900C6014F /* GradedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1F61C160F2900C6014F /* GradedActivity.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,10 @@
 		853368EF1C1011F600743C84 /* Week 16 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week 16"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853368F21C1011F600743C84 /* virtual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = virtual.cpp; sourceTree = "<group>"; };
 		853368F91C150B3A00743C84 /* virtual_reference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = virtual_reference.cpp; sourceTree = "<group>"; };
+		8584A1F21C160B8E00C6014F /* GradedActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradedActivity.h; sourceTree = "<group>"; };
+		8584A1F31C160BB200C6014F /* PassFailActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassFailActivity.h; sourceTree = "<group>"; };
+		8584A1F41C160D2300C6014F /* PassFailActivityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassFailActivityTest.cpp; sourceTree = "<group>"; };
+		8584A1F61C160F2900C6014F /* GradedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GradedActivity.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,10 @@
 			children = (
 				853368F21C1011F600743C84 /* virtual.cpp */,
 				853368F91C150B3A00743C84 /* virtual_reference.cpp */,
+				8584A1F21C160B8E00C6014F /* GradedActivity.h */,
+				8584A1F61C160F2900C6014F /* GradedActivity.cpp */,
+				8584A1F31C160BB200C6014F /* PassFailActivity.h */,
+				8584A1F41C160D2300C6014F /* PassFailActivityTest.cpp */,
 			);
 			path = "Week 16";
 			sourceTree = "<group>";
@@ -120,7 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				853368FA1C150B3A00743C84 /* virtual_reference.cpp in Sources */,
+				8584A1F51C160D2300C6014F /* PassFailActivityTest.cpp in Sources */,
+				8584A1F71C160F2900C6014F /* GradedActivity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
