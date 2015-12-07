@@ -26,7 +26,7 @@ namespace cs_creature
         int damage = demon::getDamage();
         int damage2 = (rand() % getStrength()) + 1;
         
-        cout << "Balrog speed attack inflicts " << damage2 << " additional damage points!" << endl;
+//        cout << "Balrog speed attack inflicts " << damage2 << " additional damage points!" << endl;
         damage += damage2;
         
         return damage;

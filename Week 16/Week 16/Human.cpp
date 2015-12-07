@@ -23,7 +23,7 @@ namespace cs_creature
     int human::getDamage() const
     {
         int damage = creature::getDamage();
-        cout << "The " << getSpecies() << " attacks for " << damage << " points!" << endl;
+//        cout << "The " << getSpecies() << " attacks for " << damage << " points!" << endl;
         
         return damage;
     }

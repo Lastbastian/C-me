@@ -34,6 +34,7 @@ namespace cs_creature
     int creature::getDamage() const
     {
         int damage = (rand() % strength) + 1;
+        cout << "The " << getSpecies() << " attacks for " << damage << " points!" << endl;
         
         return damage;
     }

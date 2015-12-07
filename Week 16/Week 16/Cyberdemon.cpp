@@ -22,7 +22,7 @@ namespace cs_creature
 
     int cyberdemon::getDamage() const
     {
-        cout << "The " << getSpecies();
+//        cout << "The " << getSpecies();
         int damage = demon::getDamage();
         
         return damage;
