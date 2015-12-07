@@ -39,6 +39,6 @@ namespace cs_creature
         return damage;
     }
 
-    string getSpecies()
-        { return "Creature"; }
+    string creature::getSpecies() const
+    { return "Creature"; }
 }
