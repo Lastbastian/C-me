@@ -38,7 +38,4 @@ namespace cs_creature
         
         return damage;
     }
-
-    string creature::getSpecies() const
-    { return "Creature"; }
 }

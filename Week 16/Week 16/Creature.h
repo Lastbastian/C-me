@@ -15,8 +15,8 @@ namespace cs_creature
             creature();
             creature(int newStrength, int newHitpoints);
         
-            virtual std::string getSpecies() const;
-            int getDamage() const;
+            virtual std::string getSpecies() const = 0;     // pure virtual function
+            virtual int getDamage() const;
         
             // Accessors
             int getStrength() const;

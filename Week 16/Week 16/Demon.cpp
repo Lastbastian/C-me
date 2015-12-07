@@ -24,7 +24,6 @@ namespace cs_creature
     int demon::getDamage() const
     {
         int damage = creature::getDamage();
-//        cout << " attacks for " << damage << " points!" << endl;
         if (rand() % 4 == 0) {
             damage = damage + 50;
             cout << "Demonic attack inflicts 50 additional damage points!" << endl;

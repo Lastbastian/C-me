@@ -22,7 +22,6 @@ namespace cs_creature
 
     int balrog::getDamage() const
     {
-//        cout << "The " << getSpecies();
         int damage = demon::getDamage();
         int damage2 = (rand() % getStrength()) + 1;
         

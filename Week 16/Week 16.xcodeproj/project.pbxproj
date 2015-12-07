@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8584A2051C1614A600C6014F /* Creaturetest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1F91C1614A600C6014F /* Creaturetest.cpp */; };
+		8537D5231C163BF3007DB22A /* CreatureTest2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A20C1C16316D00C6014F /* CreatureTest2.cpp */; };
 		8584A2061C1614A600C6014F /* Balrog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1FB1C1614A600C6014F /* Balrog.cpp */; };
 		8584A2071C1614A600C6014F /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1FD1C1614A600C6014F /* Creature.cpp */; };
 		8584A2081C1614A600C6014F /* Cyberdemon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1FE1C1614A600C6014F /* Cyberdemon.cpp */; };
@@ -49,6 +49,7 @@
 		8584A2021C1614A600C6014F /* Elf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Elf.cpp; sourceTree = "<group>"; };
 		8584A2031C1614A600C6014F /* Elf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elf.h; sourceTree = "<group>"; };
 		8584A2041C1614A600C6014F /* Human.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
+		8584A20C1C16316D00C6014F /* CreatureTest2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreatureTest2.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				8584A1F81C1614A600C6014F /* Creature.h */,
 				8584A1FD1C1614A600C6014F /* Creature.cpp */,
 				8584A1F91C1614A600C6014F /* Creaturetest.cpp */,
+				8584A20C1C16316D00C6014F /* CreatureTest2.cpp */,
 				8584A1FA1C1614A600C6014F /* Human.h */,
 				8584A2041C1614A600C6014F /* Human.cpp */,
 				8584A2011C1614A600C6014F /* Demon.h */,
@@ -162,8 +164,8 @@
 			files = (
 				8584A2071C1614A600C6014F /* Creature.cpp in Sources */,
 				8584A2091C1614A600C6014F /* Demon.cpp in Sources */,
-				8584A2051C1614A600C6014F /* Creaturetest.cpp in Sources */,
 				8584A2081C1614A600C6014F /* Cyberdemon.cpp in Sources */,
+				8537D5231C163BF3007DB22A /* CreatureTest2.cpp in Sources */,
 				8584A2061C1614A600C6014F /* Balrog.cpp in Sources */,
 				8584A20A1C1614A600C6014F /* Elf.cpp in Sources */,
 				8584A20B1C1614A600C6014F /* Human.cpp in Sources */,

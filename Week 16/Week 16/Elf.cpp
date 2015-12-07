@@ -23,7 +23,6 @@ namespace cs_creature
     int elf::getDamage() const
     {
         int damage = (rand() % getStrength()) + 1;
-//        cout << "The " << getSpecies() << " attacks for " << damage << " points!" << endl;
         if ((rand() % 2) == 0) {
             cout << "Magical attack inflicts " << damage << " additional damage points!" << endl;
             damage *= 2;

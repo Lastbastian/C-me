@@ -19,12 +19,4 @@ namespace cs_creature
 
     string human::getSpecies() const
     { return "Human"; }
-
-//    int human::getDamage() const
-//    {
-//        int damage = creature::getDamage();
-//        cout << "The " << getSpecies() << " attacks for " << damage << " points!" << endl;
-//        
-//        return damage;
-//    }
 }
