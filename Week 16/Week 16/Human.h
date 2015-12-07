@@ -12,7 +12,7 @@ namespace cs_creature
         human();
         human(int newStrength, int newHitpoints);
         std::string getSpecies() const;
-        int getDamage() const;
+//        int getDamage() const;
     };
 }
 
