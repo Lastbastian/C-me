@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8584A1F51C160D2300C6014F /* PassFailActivityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1F41C160D2300C6014F /* PassFailActivityTest.cpp */; };
-		8584A1F71C160F2900C6014F /* GradedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1F61C160F2900C6014F /* GradedActivity.cpp */; };
+		8584A2051C1614A600C6014F /* Creaturetest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1F91C1614A600C6014F /* Creaturetest.cpp */; };
+		8584A2061C1614A600C6014F /* Balrog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1FB1C1614A600C6014F /* Balrog.cpp */; };
+		8584A2071C1614A600C6014F /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1FD1C1614A600C6014F /* Creature.cpp */; };
+		8584A2081C1614A600C6014F /* Cyberdemon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A1FE1C1614A600C6014F /* Cyberdemon.cpp */; };
+		8584A2091C1614A600C6014F /* Demon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A2001C1614A600C6014F /* Demon.cpp */; };
+		8584A20A1C1614A600C6014F /* Elf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A2021C1614A600C6014F /* Elf.cpp */; };
+		8584A20B1C1614A600C6014F /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8584A2041C1614A600C6014F /* Human.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +36,19 @@
 		8584A1F31C160BB200C6014F /* PassFailActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassFailActivity.h; sourceTree = "<group>"; };
 		8584A1F41C160D2300C6014F /* PassFailActivityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PassFailActivityTest.cpp; sourceTree = "<group>"; };
 		8584A1F61C160F2900C6014F /* GradedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GradedActivity.cpp; sourceTree = "<group>"; };
+		8584A1F81C1614A600C6014F /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
+		8584A1F91C1614A600C6014F /* Creaturetest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creaturetest.cpp; sourceTree = "<group>"; };
+		8584A1FA1C1614A600C6014F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		8584A1FB1C1614A600C6014F /* Balrog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Balrog.cpp; sourceTree = "<group>"; };
+		8584A1FC1C1614A600C6014F /* Balrog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balrog.h; sourceTree = "<group>"; };
+		8584A1FD1C1614A600C6014F /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
+		8584A1FE1C1614A600C6014F /* Cyberdemon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cyberdemon.cpp; sourceTree = "<group>"; };
+		8584A1FF1C1614A600C6014F /* Cyberdemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cyberdemon.h; sourceTree = "<group>"; };
+		8584A2001C1614A600C6014F /* Demon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Demon.cpp; sourceTree = "<group>"; };
+		8584A2011C1614A600C6014F /* Demon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demon.h; sourceTree = "<group>"; };
+		8584A2021C1614A600C6014F /* Elf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Elf.cpp; sourceTree = "<group>"; };
+		8584A2031C1614A600C6014F /* Elf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elf.h; sourceTree = "<group>"; };
+		8584A2041C1614A600C6014F /* Human.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,19 @@
 			isa = PBXGroup;
 			children = (
 				853368F21C1011F600743C84 /* virtual.cpp */,
+				8584A1F81C1614A600C6014F /* Creature.h */,
+				8584A1F91C1614A600C6014F /* Creaturetest.cpp */,
+				8584A1FA1C1614A600C6014F /* Human.h */,
+				8584A1FB1C1614A600C6014F /* Balrog.cpp */,
+				8584A1FC1C1614A600C6014F /* Balrog.h */,
+				8584A1FD1C1614A600C6014F /* Creature.cpp */,
+				8584A1FE1C1614A600C6014F /* Cyberdemon.cpp */,
+				8584A1FF1C1614A600C6014F /* Cyberdemon.h */,
+				8584A2001C1614A600C6014F /* Demon.cpp */,
+				8584A2011C1614A600C6014F /* Demon.h */,
+				8584A2021C1614A600C6014F /* Elf.cpp */,
+				8584A2031C1614A600C6014F /* Elf.h */,
+				8584A2041C1614A600C6014F /* Human.cpp */,
 				853368F91C150B3A00743C84 /* virtual_reference.cpp */,
 				8584A1F21C160B8E00C6014F /* GradedActivity.h */,
 				8584A1F61C160F2900C6014F /* GradedActivity.cpp */,
@@ -129,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8584A1F51C160D2300C6014F /* PassFailActivityTest.cpp in Sources */,
-				8584A1F71C160F2900C6014F /* GradedActivity.cpp in Sources */,
+				8584A2071C1614A600C6014F /* Creature.cpp in Sources */,
+				8584A2091C1614A600C6014F /* Demon.cpp in Sources */,
+				8584A2051C1614A600C6014F /* Creaturetest.cpp in Sources */,
+				8584A2081C1614A600C6014F /* Cyberdemon.cpp in Sources */,
+				8584A2061C1614A600C6014F /* Balrog.cpp in Sources */,
+				8584A20A1C1614A600C6014F /* Elf.cpp in Sources */,
+				8584A20B1C1614A600C6014F /* Human.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
