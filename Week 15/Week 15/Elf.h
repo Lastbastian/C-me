@@ -1,3 +1,11 @@
+/*
+	Name: Chris Bastian
+	Class: CS110B-META-FALL-2015
+	Date: Sunday, Dec. 6th.
+	Instructor: David Harden
+	File Name: Elf.h
+ */
+
 #ifndef ELF_H
 #define ELF_H
 #include "Creature.h"
