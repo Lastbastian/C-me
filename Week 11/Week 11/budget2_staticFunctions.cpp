@@ -30,7 +30,7 @@ int main()
         cin >> budgetAmount;
         divisions[count].addBudget(budgetAmount);
         
-        // Get the request for the auxiliary office.
+        // Get the request for the ºauxiliary office.
         cout << "Enter the budget request for auxiliary office " << count + 1 << ": ";
         cin >> budgetAmount;
         auxOffices[count].addBudget(budgetAmount, divisions[count]);
